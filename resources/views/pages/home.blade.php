@@ -3,8 +3,8 @@
 @section('content')
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand me-lg-4 me-0" href="index.html">
-                <img src="images/pod-talk-logo.png" class="logo-image img-fluid" alt="templatemo pod talk">
+            <a class="navbar-brand me-lg-4 me-0" href="">
+                <img src="{{ asset('images/destination-col.png') }}" class="logo-image img-fluid" alt="templatemo pod talk">
             </a>
 
 {{--            <form action="#" method="get" class="custom-form search-form flex-fill me-3" role="search">--}}
@@ -64,7 +64,7 @@
 
                         <p class="text-white">Explore a best journey</p>
 
-                        <a href="#section_2" class="btn custom-btn smoothscroll mt-3">Start listening</a>
+{{--                        <a href="#section_2" class="btn custom-btn smoothscroll mt-3">Start</a>--}}
                     </div>
 
                     <div class="owl-carousel owl-theme">
@@ -74,7 +74,6 @@
                             <div class="owl-carousel-info">
                                 <h4 class="mb-2">
                                     Candice
-                                    <img src="images/verified.png" class="owl-carousel-verified-image img-fluid" alt="">
                                 </h4>
 
                                 <span class="badge">Storytelling</span>
@@ -101,7 +100,6 @@
                             <div class="owl-carousel-info">
                                 <h4 class="mb-2">
                                     William
-                                    <img src="images/verified.png" class="owl-carousel-verified-image img-fluid" alt="">
                                 </h4>
 
                                 <span class="badge">Creative</span>
@@ -182,7 +180,6 @@
                             <div class="owl-carousel-info">
                                 <h4 class="mb-2">
                                     Elsa
-                                    <img src="images/verified.png" class="owl-carousel-verified-image img-fluid" alt="">
                                 </h4>
 
                                 <span class="badge">Influencer</span>
@@ -569,7 +566,6 @@
 
                                 <p>
                                     Taylor
-                                    <img src="images/verified.png" class="verified-image img-fluid" alt="">
                                     <strong>Creator</strong>
                                 </p>
                             </div>
@@ -623,7 +619,6 @@
 
                                 <p>
                                     William
-                                    <img src="images/verified.png" class="verified-image img-fluid" alt="">
                                     <strong>Vlogger</strong></p>
                             </div>
 
