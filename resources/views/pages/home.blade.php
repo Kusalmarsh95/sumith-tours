@@ -1,58 +1,6 @@
 @extends('pages.app')
 
 @section('content')
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand me-lg-4 me-0" href="">
-                <img src="{{ asset('images/destination-col.png') }}" class="logo-image img-fluid" alt="templatemo pod talk">
-            </a>
-
-{{--            <form action="#" method="get" class="custom-form search-form flex-fill me-3" role="search">--}}
-{{--                <div class="input-group input-group-lg">--}}
-{{--                    <input name="search" type="search" class="form-control" id="search" placeholder="Search Podcast" aria-label="Search">--}}
-
-{{--                    <button type="submit" class="form-control" id="submit">--}}
-{{--                        <i class="bi-search"></i>--}}
-{{--                    </button>--}}
-{{--                </div>--}}
-{{--            </form>--}}
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-lg-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
-
-                        <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                            <li><a class="dropdown-item" href="listing-page.html">Listing Page</a></li>
-
-                            <li><a class="dropdown-item" href="detail-page.html">Detail Page</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-
-                <div class="ms-4">
-                    <a href="#section_3" class="btn custom-btn custom-border-btn smoothscroll">Get started</a>
-                </div>
-            </div>
-        </div>
-    </nav>
-
 
     <section class="hero-section">
         <div class="container">
@@ -60,165 +8,253 @@
 
                 <div class="col-lg-12 col-12">
                     <div class="text-center mb-5 pb-2">
-                        <h1 class="text-white">Sumith Tours</h1>
+                        <h2 class="text-white">Welcome to Sri Lanka</h2>
 
-                        <p class="text-white">Explore a best journey</p>
+                        <h4 class="text-white">Travel with Sumith Tours</h4>
 
 {{--                        <a href="#section_2" class="btn custom-btn smoothscroll mt-3">Start</a>--}}
                     </div>
 
                     <div class="owl-carousel owl-theme">
                         <div class="owl-carousel-info-wrap item">
-                            <img src="images/profile/smiling-business-woman-with-folded-hands-against-white-wall-toothy-smile-crossed-arms.jpg" class="owl-carousel-image img-fluid" alt="">
-
+                            <img src="{{ asset("images/tours/ecozip.jpg") }}" class="owl-carousel-image img-fluid" alt="">
                             <div class="owl-carousel-info">
-                                <h4 class="mb-2">
-                                    Candice
-                                </h4>
-
-                                <span class="badge">Storytelling</span>
-
-                                <span class="badge">Business</span>
+                                <h5 class="mb-2">Adventure Tour</h5>
+                                <span class="badge">Adventure</span>
+                                <span class="badge">Thrill</span>
                             </div>
 
                             <div class="social-share">
                                 <ul class="social-icon">
                                     <li class="social-icon-item">
-                                        <a href="#" class="social-icon-link bi-twitter"></a>
+                                        <a href="/adventure" class="social-icon-link bi-eye"></a>
                                     </li>
 
-                                    <li class="social-icon-item">
-                                        <a href="#" class="social-icon-link bi-facebook"></a>
-                                    </li>
                                 </ul>
                             </div>
                         </div>
-
                         <div class="owl-carousel-info-wrap item">
-                            <img src="images/profile/handsome-asian-man-listening-music-through-headphones.jpg" class="owl-carousel-image img-fluid" alt="">
-
+                            <img src="{{ asset("images/tours/adventure.jpg") }}" class="owl-carousel-image img-fluid" alt="">
                             <div class="owl-carousel-info">
-                                <h4 class="mb-2">
-                                    William
-                                </h4>
-
-                                <span class="badge">Creative</span>
-
-                                <span class="badge">Design</span>
+                                <h5 class="mb-2">Safai</h5>
+                                <span class="badge">Long</span>
+                                <span class="badge">Thrill</span>
                             </div>
 
                             <div class="social-share">
                                 <ul class="social-icon">
                                     <li class="social-icon-item">
-                                        <a href="#" class="social-icon-link bi-twitter"></a>
+                                        <a href="/adventure" class="social-icon-link bi-eye"></a>
                                     </li>
 
-                                    <li class="social-icon-item">
-                                        <a href="#" class="social-icon-link bi-facebook"></a>
-                                    </li>
-
-                                    <li class="social-icon-item">
-                                        <a href="#" class="social-icon-link bi-pinterest"></a>
-                                    </li>
                                 </ul>
                             </div>
                         </div>
-
                         <div class="owl-carousel-info-wrap item">
-                            <img src="images/profile/cute-smiling-woman-outdoor-portrait.jpg" class="owl-carousel-image img-fluid" alt="">
-
+                            <img src="{{ asset("images/tours/ecozip.jpg") }}" class="owl-carousel-image img-fluid" alt="">
                             <div class="owl-carousel-info">
-                                <h4 class="mb-2">Taylor</h4>
-
-                                <span class="badge">Modeling</span>
-
-                                <span class="badge">Fashion</span>
+                                <h5 class="mb-2">Snorkeling</h5>
+                                <span class="badge">Funny</span>
+                                <span class="badge">Enjoy</span>
                             </div>
 
                             <div class="social-share">
                                 <ul class="social-icon">
                                     <li class="social-icon-item">
-                                        <a href="#" class="social-icon-link bi-twitter"></a>
+                                        <a href="/adventure" class="social-icon-link bi-eye"></a>
                                     </li>
 
-                                    <li class="social-icon-item">
-                                        <a href="#" class="social-icon-link bi-facebook"></a>
-                                    </li>
-
-                                    <li class="social-icon-item">
-                                        <a href="#" class="social-icon-link bi-pinterest"></a>
-                                    </li>
                                 </ul>
                             </div>
                         </div>
-
                         <div class="owl-carousel-info-wrap item">
-                            <img src="images/profile/man-portrait.jpg" class="owl-carousel-image img-fluid" alt="">
-
+                            <img src="{{ asset("images/tours/adventure.jpg") }}" class="owl-carousel-image img-fluid" alt="">
                             <div class="owl-carousel-info">
-                                <h4 class="mb-2">Nick</h4>
-
-                                <span class="badge">Acting</span>
+                                <h5 class="mb-2">Rafting</h5>
+                                <span class="badge">Water</span>
+                                <span class="badge">Adventure</span>
                             </div>
 
                             <div class="social-share">
                                 <ul class="social-icon">
                                     <li class="social-icon-item">
-                                        <a href="#" class="social-icon-link bi-instagram"></a>
+                                        <a href="/adventure" class="social-icon-link bi-eye"></a>
                                     </li>
 
-                                    <li class="social-icon-item">
-                                        <a href="#" class="social-icon-link bi-youtube"></a>
-                                    </li>
                                 </ul>
                             </div>
                         </div>
-
                         <div class="owl-carousel-info-wrap item">
-                            <img src="images/profile/woman-posing-black-dress-medium-shot.jpg" class="owl-carousel-image img-fluid" alt="">
-
+                            <img src="{{ asset("images/tours/ecozip.jpg") }}" class="owl-carousel-image img-fluid" alt="">
                             <div class="owl-carousel-info">
-                                <h4 class="mb-2">
-                                    Elsa
-                                </h4>
-
-                                <span class="badge">Influencer</span>
+                                <h5 class="mb-2">Hiking</h5>
+                                <span class="badge">Highest</span>
+                                <span class="badge">Thrill</span>
                             </div>
 
                             <div class="social-share">
                                 <ul class="social-icon">
                                     <li class="social-icon-item">
-                                        <a href="#" class="social-icon-link bi-instagram"></a>
+                                        <a href="/adventure" class="social-icon-link bi-eye"></a>
                                     </li>
 
-                                    <li class="social-icon-item">
-                                        <a href="#" class="social-icon-link bi-youtube"></a>
-                                    </li>
                                 </ul>
                             </div>
                         </div>
-
                         <div class="owl-carousel-info-wrap item">
-                            <img src="images/profile/smart-attractive-asian-glasses-male-standing-smile-with-freshness-joyful-casual-blue-shirt-portrait-white-background.jpg" class="owl-carousel-image img-fluid" alt="">
-
+                            <img src="{{ asset("images/tours/adventure.jpg") }}" class="owl-carousel-image img-fluid" alt="">
                             <div class="owl-carousel-info">
-                                <h4 class="mb-2">Chan</h4>
-
-                                <span class="badge">Education</span>
+                                <h5 class="mb-2">Tracking</h5>
+                                <span class="badge">Adventure</span>
+                                <span class="badge">Thrill</span>
                             </div>
 
                             <div class="social-share">
                                 <ul class="social-icon">
                                     <li class="social-icon-item">
-                                        <a href="#" class="social-icon-link bi-linkedin"></a>
+                                        <a href="/adventure" class="social-icon-link bi-eye"></a>
                                     </li>
 
-                                    <li class="social-icon-item">
-                                        <a href="#" class="social-icon-link bi-whatsapp"></a>
-                                    </li>
                                 </ul>
                             </div>
                         </div>
+                        <div class="owl-carousel-info-wrap item">
+                            <img src="{{ asset("images/tours/ecozip.jpg") }}" class="owl-carousel-image img-fluid" alt="">
+                            <div class="owl-carousel-info">
+                                <h5 class="mb-2">Waterfall Abseiling</h5>
+                                <span class="badge">Adventure</span>
+                                <span class="badge">Thrill</span>
+                            </div>
+
+                            <div class="social-share">
+                                <ul class="social-icon">
+                                    <li class="social-icon-item">
+                                        <a href="/adventure" class="social-icon-link bi-eye"></a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="owl-carousel-info-wrap item">
+                            <img src="{{ asset("images/tours/ecozip.jpg") }}" class="owl-carousel-image img-fluid" alt="">
+                            <div class="owl-carousel-info">
+                                <h5 class="mb-2">Underground Cave</h5>
+                                <span class="badge">Adventure</span>
+                                <span class="badge">Thrill</span>
+                            </div>
+
+                            <div class="social-share">
+                                <ul class="social-icon">
+                                    <li class="social-icon-item">
+                                        <a href="/adventure" class="social-icon-link bi-eye"></a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="owl-carousel-info-wrap item">
+                            <img src="{{ asset("images/tours/ecozip.jpg") }}" class="owl-carousel-image img-fluid" alt="">
+                            <div class="owl-carousel-info">
+                                <h5 class="mb-2">Upper Waterfalls</h5>
+                                <span class="badge">Adventure</span>
+                                <span class="badge">Thrill</span>
+                            </div>
+
+                            <div class="social-share">
+                                <ul class="social-icon">
+                                    <li class="social-icon-item">
+                                        <a href="/adventure" class="social-icon-link bi-eye"></a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="owl-carousel-info-wrap item">
+                            <img src="{{ asset("images/tours/ecozip.jpg") }}" class="owl-carousel-image img-fluid" alt="">
+                            <div class="owl-carousel-info">
+                                <h5 class="mb-2">Rainforest Track</h5>
+                                <span class="badge">Adventure</span>
+                                <span class="badge">Thrill</span>
+                            </div>
+
+                            <div class="social-share">
+                                <ul class="social-icon">
+                                    <li class="social-icon-item">
+                                        <a href="/adventure" class="social-icon-link bi-eye"></a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="owl-carousel-info-wrap item">
+                            <img src="{{ asset("images/tours/ecozip.jpg") }}" class="owl-carousel-image img-fluid" alt="">
+                            <div class="owl-carousel-info">
+                                <h5 class="mb-2">Cycling</h5>
+                                <span class="badge">Adventure</span>
+                                <span class="badge">Thrill</span>
+                            </div>
+
+                            <div class="social-share">
+                                <ul class="social-icon">
+                                    <li class="social-icon-item">
+                                        <a href="/adventure" class="social-icon-link bi-eye"></a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="owl-carousel-info-wrap item">
+                            <img src="{{ asset("images/tours/ecozip.jpg") }}" class="owl-carousel-image img-fluid" alt="">
+                            <div class="owl-carousel-info">
+                                <h5 class="mb-2">Zipline</h5>
+                                <span class="badge">Adventure</span>
+                                <span class="badge">Thrill</span>
+                            </div>
+
+                            <div class="social-share">
+                                <ul class="social-icon">
+                                    <li class="social-icon-item">
+                                        <a href="/adventure" class="social-icon-link bi-eye"></a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="owl-carousel-info-wrap item">
+                            <img src="{{ asset("images/tours/ecozip.jpg") }}" class="owl-carousel-image img-fluid" alt="">
+                            <div class="owl-carousel-info">
+                                <h5 class="mb-2">Jungle Walk</h5>
+                                <span class="badge">Adventure</span>
+                                <span class="badge">Thrill</span>
+                            </div>
+
+                            <div class="social-share">
+                                <ul class="social-icon">
+                                    <li class="social-icon-item">
+                                        <a href="/adventure" class="social-icon-link bi-eye"></a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="owl-carousel-info-wrap item">
+                            <img src="{{ asset("images/tours/ecozip.jpg") }}" class="owl-carousel-image img-fluid" alt="">
+                            <div class="owl-carousel-info">
+                                <h5 class="mb-2">Confidence Jump</h5>
+                                <span class="badge">Adventure</span>
+                                <span class="badge">Thrill</span>
+                            </div>
+
+                            <div class="social-share">
+                                <ul class="social-icon">
+                                    <li class="social-icon-item">
+                                        <a href="/adventure" class="social-icon-link bi-eye"></a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 

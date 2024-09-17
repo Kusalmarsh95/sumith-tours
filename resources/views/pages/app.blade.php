@@ -23,15 +23,57 @@
 <div class="wrapper">
 
     <!-- Navbar -->
-{{--    <nav class="main-header navbar navbar-expand navbar-white navbar-light">--}}
-{{--        <!-- Left navbar links -->--}}
-{{--        <ul class="navbar-nav">--}}
-{{--            <li class="nav-item">--}}
-{{--                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>--}}
-{{--            </li>--}}
-{{--        </ul>--}}
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand me-lg-4 me-0" href="">
+                <img src="{{ asset('images/destination-col.png') }}" class="logo-image img-fluid" alt="templatemo pod talk">
+            </a>
 
-{{--    </nav>--}}
+            {{--            <form action="#" method="get" class="custom-form search-form flex-fill me-3" role="search">--}}
+            {{--                <div class="input-group input-group-lg">--}}
+            {{--                    <input name="search" type="search" class="form-control" id="search" placeholder="Search Podcast" aria-label="Search">--}}
+
+            {{--                    <button type="submit" class="form-control" id="submit">--}}
+            {{--                        <i class="bi-search"></i>--}}
+            {{--                    </button>--}}
+            {{--                </div>--}}
+            {{--            </form>--}}
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-lg-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tours</a>
+
+                        <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                            <li><a class="dropdown-item" href="/adventure">Adventure Tours</a></li>
+
+                            <li><a class="dropdown-item" href="detail-page.html">Detail Page</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="ms-4">
+{{--                    <a href="#section_3" class="btn custom-btn custom-border-btn smoothscroll">Get started</a>--}}
+                </div>
+            </div>
+        </div>
+    </nav>
     <!-- /.navbar -->
 
     <!-- Main Sidebar Container -->
@@ -67,30 +109,18 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-lg-6 col-12 mb-5 mb-lg-0">
-                    <div class="subscribe-form-wrap">
-                        <h6>Subscribe. Every weekly.</h6>
-
-                        <form class="custom-form subscribe-form" action="#" method="get" role="form">
-                            <input type="email" name="subscribe-email" id="subscribe-email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email Address" required="">
-
-                            <div class="col-lg-12 col-12">
-                                <button type="submit" class="form-control" id="submit">Subscribe</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
                 <div class="col-lg-3 col-md-6 col-12 mb-4 mb-md-0 mb-lg-0">
                     <h6 class="site-footer-title mb-3">Contact</h6>
 
-                    <p class="mb-2"><strong class="d-inline me-2">Phone:</strong> 010-020-0340</p>
+                    <p class="mb-2"><strong class="d-inline me-2">Phone:</strong> +94 76 6679247</p>
 
                     <p>
                         <strong class="d-inline me-2">Email:</strong>
                         <a href="#">inquiry@pod.co</a>
                     </p>
                 </div>
+
+                <div class="col-lg-6 col-12 mb-5 mb-lg-0"></div>
 
                 <div class="col-lg-3 col-md-6 col-12">
                     <h6 class="site-footer-title mb-3">Download Mobile</h6>

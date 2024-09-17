@@ -249,11 +249,11 @@ main {
   SITE HEADER
 -----------------------------------------*/
 .site-header {
-  background-image: url('../images/banner.png'), linear-gradient(#348CD2, #FFFFFF);;
+  background-image: url('../images/templatemo-wave-header.jpg'), linear-gradient(#348CD2, #FFFFFF);;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  min-height: 360px;
+  min-height: 240px;
   position: relative;
 }
 
@@ -475,11 +475,11 @@ main {
   CAROUSEL
 -----------------------------------------*/
 .hero-section {
-  background-image: url('../images/banner.png'), linear-gradient(#348CD2, #FFFFFF);
+  background-image: url('../images/templatemo-wave-banner.jpg'), linear-gradient(#348CD2, #FFFFFF);
   background-repeat: no-repeat;
-  background-size: 108% 76%;
+  background-size: 108% 56%;
   background-position: top;
-  padding-top: 120px;
+  padding-top: 100px;
 }
 
 .owl-carousel {
@@ -1007,15 +1007,15 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  margin-top: -80px;
-  padding-top: 100px;
-  padding-bottom: 150px;
+  margin-top: -60px;
+  padding-top: 75px;
+  padding-bottom: 100px;
 }
 
 .site-footer > .container {
   position: relative;
-  top: 50px;
-  padding-top: 100px;
+  top: 25px;
+  padding-top: 20px;
 }
 
 .site-footer-title,
