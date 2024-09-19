@@ -1,81 +1,76 @@
 @extends('pages.app')
 
 @section('content')
-
-    <section class="hero-section">
+    <!-- ***** Main Banner Area Start ***** -->
+    <div class="about-main-content" style="background-image: url('/images/Safari.jpg');">
         <div class="container">
             <div class="row">
-
-                <div class="col-lg-12 col-12">
-                    <div class="text-center mb-5 pb-2"></div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section class="topics-section pt-4 pb-0" id="section_3">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-12 col-12">
-                    <div class="section-title-wrap mb-4">
-                        <h2 class="section-title">Adventure Tour</h2>
+                <div class="col-lg-12">
+                    <div class="content">
+                        <div class="blur-bg" style="background-image: url('/images/Safari.jpg');"></div>
+                        <h2>SAFARI</h2>
+                        <div class="line-dec"></div>
+                        {{--                        <h2>Welcome To Caribbean</h2>--}}
+                        <p>Experience the wild like never before with our safari tours!
+                            Journey through stunning landscapes, encounter majestic wildlife,
+                            and immerse yourself in nature. Our tours offer an exhilarating
+                            blend of adventure and tranquility.</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
 
-                <div class="col-12 mb-4 mb-lg-0">
-                    <div class="custom-block custom-block-overlay">
-                        <div class="row">
-                            <div class="col-lg-3">
-                                <a class="custom-block-image-wrap">
-                                    <img src="images/topics/lk.jpg" class="custom-block-image img-fluid" alt="">
-                                </a>
-                            </div>
-                            <div class="col-lg-3">
-                                <a class="custom-block-image-wrap">
-                                    <img src="images/topics/lk.jpg" class="custom-block-image img-fluid" alt="">
-                                </a>
-                            </div>
-                            <div class="col-lg-3">
-                                <a class="custom-block-image-wrap">
-                                    <img src="images/topics/lk.jpg" class="custom-block-image img-fluid" alt="">
-                                </a>
-                            </div>
-                            <div class="col-lg-3">
-                                <a class="custom-block-image-wrap">
-                                    <img src="images/topics/lk.jpg" class="custom-block-image img-fluid" alt="">
-                                </a>
+    <div class="cities-town">
+        <div class="container">
+            <div class="row">
+                <div class="slider-content">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h2>Memories of <em>Safari</em></h2>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="owl-cites-town owl-carousel">
+                                <div class="item">
+                                    <div class="thumb">
+                                        <img src="images/cities-01.jpg" alt="">
+                                        <h4>Jungle</h4>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="thumb">
+                                        <img src="images/cities-02.jpg" alt="">
+                                        <h4>Sea</h4>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="thumb">
+                                        <img src="images/cities-03.jpg" alt="">
+                                        <h4>Fort</h4>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="thumb">
+                                        <img src="images/cities-04.jpg" alt="">
+                                        <h4>Mountain</h4>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="custom-block-info custom-block-overlay-info">
-                            <p class="mb-1 mt-3" style="text-align: justify;">
-                                <span>
-                                    Embark on a journey filled with excitement and thrill with our Adventure Tours,
-                                    specially crafted for those seeking adrenaline-pumping experiences. Whether
-                                    you're navigating rugged terrains, exploring hidden trails, or conquering breathtaking
-                                    peaks, our tours provide the perfect mix of challenge and adventure. Dive into thrilling
-                                    activities like rock climbing, white-water rafting, and zip-lining as you discover the
-                                    raw beauty of nature. Each tour is led by our experienced guides, ensuring your safety
-                                    while maximizing the fun.
-                                </span>
-                            </p>
-                            <p class="mb-1 mt-3" style="text-align: justify;">
-                                <span>
-                                    Whether you're a seasoned adventurer or a beginner ready to
-                                    push your limits, our Adventure Tours are designed to leave you with lasting memories
-                                    and an unmatched sense of accomplishment. Come explore the great outdoors with us and
-                                    experience the adventure of a lifetime!
-                                </span>
-                            </p>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-lg-12">
+                            <div class="main-button text-center">
+                                <a href="deals.html">Make a Reservation</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="trending-podcast-section section-padding"></section>
+
 @endsection
 

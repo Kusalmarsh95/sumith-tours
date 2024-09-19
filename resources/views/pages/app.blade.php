@@ -45,11 +45,11 @@
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                        <li><a href="/" class="active">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li><a href="/about">About</a></li>
-                        <li><a href="deals.html">Deals</a></li>
+                        <li><a href="deals.html">Services</a></li>
+                        <li><a href="reservation.html">Itinerary</a></li>
                         <li><a href="reservation.html">Reservation</a></li>
-                        <li><a href="reservation.html">Book Yours</a></li>
                     </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -71,7 +71,7 @@
             </div>
             <div class="col-lg-4">
                 <div class="border-button">
-                    <a href="reservation.html">Book Yours Now</a>
+                    <a href="/reservation">Reserve Now</a>
                 </div>
             </div>
         </div>
@@ -82,8 +82,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <p>Copyright © 2036 <a href="#">WoOx Travel</a> Company. All rights reserved.
-                    <br>Design: <a href="https://templatemo.com" target="_blank" title="free CSS templates">TemplateMo</a></p>
+                <p>Copyright © 2024 <a href="#">Sumith Tours</a>. All rights reserved.
+{{--                    <br>Design: <a href="https://templatemo.com" target="_blank" title="free CSS templates">TemplateMo</a></p>--}}
             </div>
         </div>
     </div>

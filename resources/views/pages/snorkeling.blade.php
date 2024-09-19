@@ -2,21 +2,18 @@
 
 @section('content')
     <!-- ***** Main Banner Area Start ***** -->
-    <div class="about-main-content" style="background-image: url('/images/about-content-bg.jpg');">
+    <div class="about-main-content" style="background-image: url('/images/snorkeling.jpg');">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="content">
-                        <div class="blur-bg" style="background-image: url('/images/about-content-bg.jpg');"></div>
-                        <h2>ADVENTURE TOUR</h2>
+                        <div class="blur-bg" style="background-image: url('/images/snorkeling.jpg');"></div>
+                        <h2>SNORKELING</h2>
                         <div class="line-dec"></div>
-{{--                        <h2>Welcome To Caribbean</h2>--}}
-                        <p>Embark on an unforgettable adventure tour, exploring rugged terrains, wild landscapes,
-                            and thrilling outdoor activities. Our expertly guided tours promise excitement and
-                            breathtaking experiences for thrill-seekers of all levels.</p>
-{{--                        <div class="main-button">--}}
-{{--                            <a href="/reservation">Make a Reservation</a>--}}
-{{--                        </div>--}}
+                        {{--                        <h2>Welcome To Caribbean</h2>--}}
+                        <p>Combine the thrill of a safari with the beauty of underwater exploration on our
+                            snorkeling tours! Dive into crystal-clear waters to discover vibrant marine
+                            life and stunning coral reefs, all while enjoying the excitement of a guided adventure.</p>
                     </div>
                 </div>
             </div>
@@ -30,7 +27,7 @@
                 <div class="slider-content">
                     <div class="row">
                         <div class="col-lg-12">
-                            <h2>Memories of <em>Adventure Tours</em></h2>
+                            <h2>Memories of <em>Snorkeling</em></h2>
                         </div>
                         <div class="col-lg-12">
                             <div class="owl-cites-town owl-carousel">

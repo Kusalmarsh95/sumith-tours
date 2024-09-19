@@ -22,7 +22,7 @@
                                         <div class="row">
                                             <div class="col-lg-3 col-sm-6 col-6">
                                                 <i class="fa fa-user"></i>
-                                                <h4><span>Population:</span><br>115</h4>
+                                                <h4><span>Travellers:</span><br>115</h4>
                                             </div>
                                             <div class="col-lg-3 col-sm-6 col-6">
                                                 <i class="fa fa-globe"></i>
@@ -30,7 +30,7 @@
                                             </div>
                                             <div class="col-lg-3 col-sm-6 col-6">
                                                 <i class="fa fa-home"></i>
-                                                <h4><span>Average D Price:</span><br>$946.000</h4>
+                                                <h4><span>Average Days:</span><br>5</h4>
                                             </div>
                                             <div class="col-lg-3 col-sm-6 col-6">
                                                 <div class="main-button">
@@ -48,8 +48,8 @@
                     <div class="banner-inner-wrapper header-text">
                         <div class="main-caption">
                             <h1>Welcome to Sri Lanka</h1>
-                            <h1>Switzerland</h1>
-                            <div class="border-button"><a href="/about">Go There</a></div>
+                            <h2>Travel with Sumith Tours</h2>
+                            {{--                            <div class="border-button"><a href="/about">Go There</a></div>--}}
                         </div>
                         <div class="container">
                             <div class="row">
@@ -58,15 +58,15 @@
                                         <div class="row">
                                             <div class="col-lg-3 col-sm-6 col-6">
                                                 <i class="fa fa-user"></i>
-                                                <h4><span>Population:</span><br>8.66 M</h4>
+                                                <h4><span>Travellers:</span><br>115</h4>
                                             </div>
                                             <div class="col-lg-3 col-sm-6 col-6">
                                                 <i class="fa fa-globe"></i>
-                                                <h4><span>Territory:</span><br>41.290 KM<em>2</em></h4>
+                                                <h4><span>Districts:</span><br>Island wide</h4>
                                             </div>
                                             <div class="col-lg-3 col-sm-6 col-6">
                                                 <i class="fa fa-home"></i>
-                                                <h4><span>AVG Price:</span><br>$1.100.200</h4>
+                                                <h4><span>Average Days:</span><br>5</h4>
                                             </div>
                                             <div class="col-lg-3 col-sm-6 col-6">
                                                 <div class="main-button">
@@ -84,8 +84,8 @@
                     <div class="banner-inner-wrapper header-text">
                         <div class="main-caption">
                             <h1>Welcome to Sri Lanka</h1>
-                            <h1>France</h1>
-                            <div class="border-button"><a href="/about">Go There</a></div>
+                            <h2>Travel with Sumith Tours</h2>
+                            {{--                            <div class="border-button"><a href="/about">Go There</a></div>--}}
                         </div>
                         <div class="container">
                             <div class="row">
@@ -94,15 +94,15 @@
                                         <div class="row">
                                             <div class="col-lg-3 col-sm-6 col-6">
                                                 <i class="fa fa-user"></i>
-                                                <h4><span>Population:</span><br>67.41 M</h4>
+                                                <h4><span>Travellers:</span><br>115</h4>
                                             </div>
                                             <div class="col-lg-3 col-sm-6 col-6">
                                                 <i class="fa fa-globe"></i>
-                                                <h4><span>Territory:</span><br>551.500 KM<em>2</em></h4>
+                                                <h4><span>Districts:</span><br>Island wide</h4>
                                             </div>
                                             <div class="col-lg-3 col-sm-6 col-6">
                                                 <i class="fa fa-home"></i>
-                                                <h4><span>AVG Price:</span><br>$425.600</h4>
+                                                <h4><span>Average Days:</span><br>5</h4>
                                             </div>
                                             <div class="col-lg-3 col-sm-6 col-6">
                                                 <div class="main-button">
@@ -121,7 +121,7 @@
                         <div class="main-caption">
                             <h1>Welcome to Sri Lanka</h1>
                             <h2>Travel with Sumith Tours</h2>
-{{--                            <div class="border-button"><a href="/about">Go There</a></div>--}}
+                            {{--                            <div class="border-button"><a href="/about">Go There</a></div>--}}
                         </div>
                         <div class="container">
                             <div class="row">
@@ -130,15 +130,15 @@
                                         <div class="row">
                                             <div class="col-lg-3 col-sm-6 col-6">
                                                 <i class="fa fa-user"></i>
-                                                <h4><span>Population:</span><br>69.86 M</h4>
+                                                <h4><span>Travellers:</span><br>115</h4>
                                             </div>
                                             <div class="col-lg-3 col-sm-6 col-6">
                                                 <i class="fa fa-globe"></i>
-                                                <h4><span>Territory:</span><br>513.120 KM<em>2</em></h4>
+                                                <h4><span>Districts:</span><br>Island wide</h4>
                                             </div>
                                             <div class="col-lg-3 col-sm-6 col-6">
                                                 <i class="fa fa-home"></i>
-                                                <h4><span>AVG Price:</span><br>$165.450</h4>
+                                                <h4><span>Average Days:</span><br>5</h4>
                                             </div>
                                             <div class="col-lg-3 col-sm-6 col-6">
                                                 <div class="main-button">
@@ -155,10 +155,10 @@
             </div>
             <nav>
                 <div class="controls">
-                    <label for="banner1"><span class="progressbar"><span class="progressbar-fill"></span></span><span class="text">1</span></label>
-                    <label for="banner2"><span class="progressbar"><span class="progressbar-fill"></span></span><span class="text">2</span></label>
-                    <label for="banner3"><span class="progressbar"><span class="progressbar-fill"></span></span><span class="text">3</span></label>
-                    <label for="banner4"><span class="progressbar"><span class="progressbar-fill"></span></span><span class="text">4</span></label>
+                    <label for="banner1"><span class="progressbar"><span class="progressbar-fill"></span></span><span class="text">o</span></label>
+                    <label for="banner2"><span class="progressbar"><span class="progressbar-fill"></span></span><span class="text">o</span></label>
+                    <label for="banner3"><span class="progressbar"><span class="progressbar-fill"></span></span><span class="text">o</span></label>
+                    <label for="banner4"><span class="progressbar"><span class="progressbar-fill"></span></span><span class="text">o</span></label>
                 </div>
             </nav>
         </div>
@@ -170,8 +170,11 @@
             <div class="row">
                 <div class="col-lg-5">
                     <div class="section-heading">
-                        <h2>Visit One Of Our Countries Now</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                        <h2>Travel with us Now</h2>
+                        <p>Discover the Sri Lanka's top destinations with our expert travel guides!
+                            We offer insider tips on must-see attractions, local cuisine, and cultural
+                            experiences. Plan your perfect trip with personalized itineraries, practical advice,
+                            and travel inspiration for every kind of adventurer.</p>
                     </div>
                 </div>
             </div>
@@ -189,20 +192,22 @@
                                         </div>
                                         <div class="col-lg-8 col-sm-7">
                                             <div class="right-content">
-                                                <h4>SWITZERLAND</h4>
-                                                <span>Europe</span>
+                                                <h4>Adventure Tour</h4>
+                                                <span>Up Country</span>
                                                 <div class="main-button">
-                                                    <a href="/about">Explore More</a>
+                                                    <a href="/adventure">Explore More</a>
                                                 </div>
-                                                <p>Woox Travel is a professional Bootstrap 5 theme HTML CSS layout for your website. You can use this layout for your commercial work.</p>
+                                                <p>Embark on an unforgettable adventure tour, exploring rugged terrains, wild landscapes,
+                                                    and thrilling outdoor activities. Our expertly guided tours promise excitement and
+                                                    breathtaking experiences for thrill-seekers of all levels.</p>
                                                 <ul class="info">
-                                                    <li><i class="fa fa-user"></i> 8.66 Mil People</li>
-                                                    <li><i class="fa fa-globe"></i> 41.290 km2</li>
-                                                    <li><i class="fa fa-home"></i> $1.100.200</li>
+                                                    <li><i class="fa fa-user"></i> 56 Travellers</li>
+                                                    <li><i class="fa fa-globe"></i> 3 Districts</li>
+                                                    <li><i class="fa fa-home"></i> 4 Days</li>
                                                 </ul>
-                                                <div class="text-button">
-                                                    <a href="/about">Need Directions ? <i class="fa fa-arrow-right"></i></a>
-                                                </div>
+{{--                                                <div class="text-button">--}}
+{{--                                                    <a href="/about">Need Directions ? <i class="fa fa-arrow-right"></i></a>--}}
+{{--                                                </div>--}}
                                             </div>
                                         </div>
                                     </div>
@@ -218,20 +223,23 @@
                                         </div>
                                         <div class="col-lg-8 col-sm-7">
                                             <div class="right-content">
-                                                <h4>CARIBBEAN</h4>
-                                                <span>North America</span>
+                                                <h4>Safari</h4>
+                                                <span>Forests</span>
                                                 <div class="main-button">
-                                                    <a href="/about">Explore More</a>
+                                                    <a href="/safari">Explore More</a>
                                                 </div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+                                                <p>Experience the wild like never before with our safari tours!
+                                                    Journey through stunning landscapes, encounter majestic wildlife,
+                                                    and immerse yourself in nature. Our tours offer an exhilarating
+                                                    blend of adventure and tranquility.</p>
                                                 <ul class="info">
-                                                    <li><i class="fa fa-user"></i> 44.48 Mil People</li>
-                                                    <li><i class="fa fa-globe"></i> 275.400 km2</li>
-                                                    <li><i class="fa fa-home"></i> $946.000</li>
+                                                    <li><i class="fa fa-user"></i> 86 Travellers</li>
+                                                    <li><i class="fa fa-globe"></i> 2 Jungles</li>
+                                                    <li><i class="fa fa-home"></i> 3 Days</li>
                                                 </ul>
-                                                <div class="text-button">
-                                                    <a href="/about">Need Directions ? <i class="fa fa-arrow-right"></i></a>
-                                                </div>
+{{--                                                <div class="text-button">--}}
+{{--                                                    <a href="/about">Need Directions ? <i class="fa fa-arrow-right"></i></a>--}}
+{{--                                                </div>--}}
                                             </div>
                                         </div>
                                     </div>
@@ -247,20 +255,22 @@
                                         </div>
                                         <div class="col-lg-8 col-sm-7">
                                             <div class="right-content">
-                                                <h4>FRANCE</h4>
-                                                <span>Europe</span>
+                                                <h4>Snorkeling</h4>
+                                                <span>Under Water</span>
                                                 <div class="main-button">
-                                                    <a href="/about">Explore More</a>
+                                                    <a href="/snorkeling">Explore More</a>
                                                 </div>
-                                                <p>We hope this WoOx template is useful for you, please support us a <a href="https://paypal.me/templatemo" target="_blank">small amount of PayPal</a> to info [at] templatemo.com for our survival. We really appreciate your contribution.</p>
+                                                <p>Combine the thrill of a safari with the beauty of underwater exploration on our
+                                                    snorkeling tours! Dive into crystal-clear waters to discover vibrant marine
+                                                    life and stunning coral reefs, all while enjoying the excitement of a guided adventure.</p>
                                                 <ul class="info">
-                                                    <li><i class="fa fa-user"></i> 67.41 Mil People</li>
-                                                    <li><i class="fa fa-globe"></i> 551.500 km2</li>
-                                                    <li><i class="fa fa-home"></i> $425.600</li>
+                                                    <li><i class="fa fa-user"></i> 105 Travellers</li>
+                                                    <li><i class="fa fa-globe"></i> 4 Water areas</li>
+                                                    <li><i class="fa fa-home"></i> 2 Days</li>
                                                 </ul>
-                                                <div class="text-button">
-                                                    <a href="/about">Need Directions ? <i class="fa fa-arrow-right"></i></a>
-                                                </div>
+{{--                                                <div class="text-button">--}}
+{{--                                                    <a href="/about">Need Directions ? <i class="fa fa-arrow-right"></i></a>--}}
+{{--                                                </div>--}}
                                             </div>
                                         </div>
                                     </div>
@@ -269,8 +279,8 @@
                             <div class="col-lg-12">
                                 <ul class="page-numbers">
                                     <li><a href="#"><i class="fa fa-arrow-left"></i></a></li>
-                                    <li><a href="#">1</a></li>
-                                    <li class="active"><a href="#">2</a></li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
                                     <li><a href="#">3</a></li>
                                     <li><a href="#"><i class="fa fa-arrow-right"></i></a></li>
                                 </ul>
@@ -283,7 +293,7 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <div id="map">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12469.776493332698!2d-80.14036379941481!3d25.907788681148624!2m3!1f357.26927939317244!2f20.870722720054623!3f0!3m2!1i1024!2i768!4f35!3m3!1m2!1s0x88d9add4b4ac788f%3A0xe77469d09480fcdb!2sSunny%20Isles%20Beach!5e1!3m2!1sen!2sth!4v1642869952544!5m2!1sen!2sth" width="100%" height="550px" frameborder="0" style="border:0; border-radius: 23px; " allowfullscreen=""></iframe>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!3m1!1e3!4m6!3m5!1s0x3ae408ff88887e79:0xaf12e79ffbd980d7!8m2!3d6.4746288!4d80.876319!16zL20vMDJzMHlj?entry=ttu&g_ep=EgoyMDI0MDkxNi4wIKXMDSoASAFQAw%3D%3D" width="100%" height="550px" frameborder="0" style="border:0; border-radius: 23px; " allowfullscreen=""></iframe>
                                 </div>
                             </div>
                         </div>
