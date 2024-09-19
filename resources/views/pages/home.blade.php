@@ -1,694 +1,310 @@
 @extends('pages.app')
-
 @section('content')
 
-    <section class="hero-section">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-12 col-12">
-                    <div class="text-center mb-5 pb-2">
-                        <h2 class="text-white">Welcome to Sri Lanka</h2>
-
-                        <h4 class="text-white">Travel with Sumith Tours</h4>
-
-{{--                        <a href="#section_2" class="btn custom-btn smoothscroll mt-3">Start</a>--}}
-                    </div>
-
-                    <div class="owl-carousel owl-theme">
-                        <div class="owl-carousel-info-wrap item">
-                            <img src="{{ asset("images/tours/ecozip.jpg") }}" class="owl-carousel-image img-fluid" alt="">
-                            <div class="owl-carousel-info">
-                                <h5 class="mb-2">Adventure Tour</h5>
-                                <span class="badge">Adventure</span>
-                                <span class="badge">Thrill</span>
-                            </div>
-
-                            <div class="social-share">
-                                <ul class="social-icon">
-                                    <li class="social-icon-item">
-                                        <a href="/adventure" class="social-icon-link bi-eye"></a>
-                                    </li>
-
-                                </ul>
+    <section id="section-1">
+        <div class="content-slider">
+            <input type="radio" id="banner1" class="sec-1-input" name="banner" checked>
+            <input type="radio" id="banner2" class="sec-1-input" name="banner">
+            <input type="radio" id="banner3" class="sec-1-input" name="banner">
+            <input type="radio" id="banner4" class="sec-1-input" name="banner">
+            <div class="slider">
+                <div id="top-banner-1" class="banner">
+                    <div class="banner-inner-wrapper header-text">
+                        <div class="main-caption">
+                            <h1>Welcome to Sri Lanka</h1>
+                            <h2>Travel with Sumith Tours</h2>
+{{--                            <div class="border-button"><a href="/about">Go There</a></div>--}}
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="more-info">
+                                        <div class="row">
+                                            <div class="col-lg-3 col-sm-6 col-6">
+                                                <i class="fa fa-user"></i>
+                                                <h4><span>Population:</span><br>115</h4>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-6 col-6">
+                                                <i class="fa fa-globe"></i>
+                                                <h4><span>Districts:</span><br>Island wide</h4>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-6 col-6">
+                                                <i class="fa fa-home"></i>
+                                                <h4><span>Average D Price:</span><br>$946.000</h4>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-6 col-6">
+                                                <div class="main-button">
+                                                    <a href="/about">Explore More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="owl-carousel-info-wrap item">
-                            <img src="{{ asset("images/tours/adventure.jpg") }}" class="owl-carousel-image img-fluid" alt="">
-                            <div class="owl-carousel-info">
-                                <h5 class="mb-2">Safai</h5>
-                                <span class="badge">Long</span>
-                                <span class="badge">Thrill</span>
-                            </div>
-
-                            <div class="social-share">
-                                <ul class="social-icon">
-                                    <li class="social-icon-item">
-                                        <a href="/adventure" class="social-icon-link bi-eye"></a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="owl-carousel-info-wrap item">
-                            <img src="{{ asset("images/tours/ecozip.jpg") }}" class="owl-carousel-image img-fluid" alt="">
-                            <div class="owl-carousel-info">
-                                <h5 class="mb-2">Snorkeling</h5>
-                                <span class="badge">Funny</span>
-                                <span class="badge">Enjoy</span>
-                            </div>
-
-                            <div class="social-share">
-                                <ul class="social-icon">
-                                    <li class="social-icon-item">
-                                        <a href="/adventure" class="social-icon-link bi-eye"></a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="owl-carousel-info-wrap item">
-                            <img src="{{ asset("images/tours/adventure.jpg") }}" class="owl-carousel-image img-fluid" alt="">
-                            <div class="owl-carousel-info">
-                                <h5 class="mb-2">Rafting</h5>
-                                <span class="badge">Water</span>
-                                <span class="badge">Adventure</span>
-                            </div>
-
-                            <div class="social-share">
-                                <ul class="social-icon">
-                                    <li class="social-icon-item">
-                                        <a href="/adventure" class="social-icon-link bi-eye"></a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="owl-carousel-info-wrap item">
-                            <img src="{{ asset("images/tours/ecozip.jpg") }}" class="owl-carousel-image img-fluid" alt="">
-                            <div class="owl-carousel-info">
-                                <h5 class="mb-2">Hiking</h5>
-                                <span class="badge">Highest</span>
-                                <span class="badge">Thrill</span>
-                            </div>
-
-                            <div class="social-share">
-                                <ul class="social-icon">
-                                    <li class="social-icon-item">
-                                        <a href="/adventure" class="social-icon-link bi-eye"></a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="owl-carousel-info-wrap item">
-                            <img src="{{ asset("images/tours/adventure.jpg") }}" class="owl-carousel-image img-fluid" alt="">
-                            <div class="owl-carousel-info">
-                                <h5 class="mb-2">Tracking</h5>
-                                <span class="badge">Adventure</span>
-                                <span class="badge">Thrill</span>
-                            </div>
-
-                            <div class="social-share">
-                                <ul class="social-icon">
-                                    <li class="social-icon-item">
-                                        <a href="/adventure" class="social-icon-link bi-eye"></a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="owl-carousel-info-wrap item">
-                            <img src="{{ asset("images/tours/ecozip.jpg") }}" class="owl-carousel-image img-fluid" alt="">
-                            <div class="owl-carousel-info">
-                                <h5 class="mb-2">Waterfall Abseiling</h5>
-                                <span class="badge">Adventure</span>
-                                <span class="badge">Thrill</span>
-                            </div>
-
-                            <div class="social-share">
-                                <ul class="social-icon">
-                                    <li class="social-icon-item">
-                                        <a href="/adventure" class="social-icon-link bi-eye"></a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="owl-carousel-info-wrap item">
-                            <img src="{{ asset("images/tours/ecozip.jpg") }}" class="owl-carousel-image img-fluid" alt="">
-                            <div class="owl-carousel-info">
-                                <h5 class="mb-2">Underground Cave</h5>
-                                <span class="badge">Adventure</span>
-                                <span class="badge">Thrill</span>
-                            </div>
-
-                            <div class="social-share">
-                                <ul class="social-icon">
-                                    <li class="social-icon-item">
-                                        <a href="/adventure" class="social-icon-link bi-eye"></a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="owl-carousel-info-wrap item">
-                            <img src="{{ asset("images/tours/ecozip.jpg") }}" class="owl-carousel-image img-fluid" alt="">
-                            <div class="owl-carousel-info">
-                                <h5 class="mb-2">Upper Waterfalls</h5>
-                                <span class="badge">Adventure</span>
-                                <span class="badge">Thrill</span>
-                            </div>
-
-                            <div class="social-share">
-                                <ul class="social-icon">
-                                    <li class="social-icon-item">
-                                        <a href="/adventure" class="social-icon-link bi-eye"></a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="owl-carousel-info-wrap item">
-                            <img src="{{ asset("images/tours/ecozip.jpg") }}" class="owl-carousel-image img-fluid" alt="">
-                            <div class="owl-carousel-info">
-                                <h5 class="mb-2">Rainforest Track</h5>
-                                <span class="badge">Adventure</span>
-                                <span class="badge">Thrill</span>
-                            </div>
-
-                            <div class="social-share">
-                                <ul class="social-icon">
-                                    <li class="social-icon-item">
-                                        <a href="/adventure" class="social-icon-link bi-eye"></a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="owl-carousel-info-wrap item">
-                            <img src="{{ asset("images/tours/ecozip.jpg") }}" class="owl-carousel-image img-fluid" alt="">
-                            <div class="owl-carousel-info">
-                                <h5 class="mb-2">Cycling</h5>
-                                <span class="badge">Adventure</span>
-                                <span class="badge">Thrill</span>
-                            </div>
-
-                            <div class="social-share">
-                                <ul class="social-icon">
-                                    <li class="social-icon-item">
-                                        <a href="/adventure" class="social-icon-link bi-eye"></a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="owl-carousel-info-wrap item">
-                            <img src="{{ asset("images/tours/ecozip.jpg") }}" class="owl-carousel-image img-fluid" alt="">
-                            <div class="owl-carousel-info">
-                                <h5 class="mb-2">Zipline</h5>
-                                <span class="badge">Adventure</span>
-                                <span class="badge">Thrill</span>
-                            </div>
-
-                            <div class="social-share">
-                                <ul class="social-icon">
-                                    <li class="social-icon-item">
-                                        <a href="/adventure" class="social-icon-link bi-eye"></a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="owl-carousel-info-wrap item">
-                            <img src="{{ asset("images/tours/ecozip.jpg") }}" class="owl-carousel-image img-fluid" alt="">
-                            <div class="owl-carousel-info">
-                                <h5 class="mb-2">Jungle Walk</h5>
-                                <span class="badge">Adventure</span>
-                                <span class="badge">Thrill</span>
-                            </div>
-
-                            <div class="social-share">
-                                <ul class="social-icon">
-                                    <li class="social-icon-item">
-                                        <a href="/adventure" class="social-icon-link bi-eye"></a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="owl-carousel-info-wrap item">
-                            <img src="{{ asset("images/tours/ecozip.jpg") }}" class="owl-carousel-image img-fluid" alt="">
-                            <div class="owl-carousel-info">
-                                <h5 class="mb-2">Confidence Jump</h5>
-                                <span class="badge">Adventure</span>
-                                <span class="badge">Thrill</span>
-                            </div>
-
-                            <div class="social-share">
-                                <ul class="social-icon">
-                                    <li class="social-icon-item">
-                                        <a href="/adventure" class="social-icon-link bi-eye"></a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
-
+                <div id="top-banner-2" class="banner">
+                    <div class="banner-inner-wrapper header-text">
+                        <div class="main-caption">
+                            <h1>Welcome to Sri Lanka</h1>
+                            <h1>Switzerland</h1>
+                            <div class="border-button"><a href="/about">Go There</a></div>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="more-info">
+                                        <div class="row">
+                                            <div class="col-lg-3 col-sm-6 col-6">
+                                                <i class="fa fa-user"></i>
+                                                <h4><span>Population:</span><br>8.66 M</h4>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-6 col-6">
+                                                <i class="fa fa-globe"></i>
+                                                <h4><span>Territory:</span><br>41.290 KM<em>2</em></h4>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-6 col-6">
+                                                <i class="fa fa-home"></i>
+                                                <h4><span>AVG Price:</span><br>$1.100.200</h4>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-6 col-6">
+                                                <div class="main-button">
+                                                    <a href="/about">Explore More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="top-banner-3" class="banner">
+                    <div class="banner-inner-wrapper header-text">
+                        <div class="main-caption">
+                            <h1>Welcome to Sri Lanka</h1>
+                            <h1>France</h1>
+                            <div class="border-button"><a href="/about">Go There</a></div>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="more-info">
+                                        <div class="row">
+                                            <div class="col-lg-3 col-sm-6 col-6">
+                                                <i class="fa fa-user"></i>
+                                                <h4><span>Population:</span><br>67.41 M</h4>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-6 col-6">
+                                                <i class="fa fa-globe"></i>
+                                                <h4><span>Territory:</span><br>551.500 KM<em>2</em></h4>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-6 col-6">
+                                                <i class="fa fa-home"></i>
+                                                <h4><span>AVG Price:</span><br>$425.600</h4>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-6 col-6">
+                                                <div class="main-button">
+                                                    <a href="/about">Explore More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="top-banner-4" class="banner">
+                    <div class="banner-inner-wrapper header-text">
+                        <div class="main-caption">
+                            <h1>Welcome to Sri Lanka</h1>
+                            <h2>Travel with Sumith Tours</h2>
+{{--                            <div class="border-button"><a href="/about">Go There</a></div>--}}
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="more-info">
+                                        <div class="row">
+                                            <div class="col-lg-3 col-sm-6 col-6">
+                                                <i class="fa fa-user"></i>
+                                                <h4><span>Population:</span><br>69.86 M</h4>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-6 col-6">
+                                                <i class="fa fa-globe"></i>
+                                                <h4><span>Territory:</span><br>513.120 KM<em>2</em></h4>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-6 col-6">
+                                                <i class="fa fa-home"></i>
+                                                <h4><span>AVG Price:</span><br>$165.450</h4>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-6 col-6">
+                                                <div class="main-button">
+                                                    <a href="/about">Explore More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <nav>
+                <div class="controls">
+                    <label for="banner1"><span class="progressbar"><span class="progressbar-fill"></span></span><span class="text">1</span></label>
+                    <label for="banner2"><span class="progressbar"><span class="progressbar-fill"></span></span><span class="text">2</span></label>
+                    <label for="banner3"><span class="progressbar"><span class="progressbar-fill"></span></span><span class="text">3</span></label>
+                    <label for="banner4"><span class="progressbar"><span class="progressbar-fill"></span></span><span class="text">4</span></label>
+                </div>
+            </nav>
         </div>
     </section>
+    <!-- ***** Main Banner Area End ***** -->
 
-
-{{--    <section class="latest-podcast-section section-padding pb-0" id="section_2">--}}
-{{--        <div class="container">--}}
-{{--            <div class="row justify-content-center">--}}
-
-{{--                <div class="col-lg-12 col-12">--}}
-{{--                    <div class="section-title-wrap mb-5">--}}
-{{--                        <h4 class="section-title">Lastest episodes</h4>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-
-{{--                <div class="col-lg-6 col-12 mb-4 mb-lg-0">--}}
-{{--                    <div class="custom-block d-flex">--}}
-{{--                        <div class="">--}}
-{{--                            <div class="custom-block-icon-wrap">--}}
-{{--                                <div class="section-overlay"></div>--}}
-{{--                                <a href="detail-page.html" class="custom-block-image-wrap">--}}
-{{--                                    <img src="images/podcast/11683425_4790593.jpg" class="custom-block-image img-fluid" alt="">--}}
-
-{{--                                    <a href="#" class="custom-block-icon">--}}
-{{--                                        <i class="bi-play-fill"></i>--}}
-{{--                                    </a>--}}
-{{--                                </a>--}}
-{{--                            </div>--}}
-
-{{--                            <div class="mt-2">--}}
-{{--                                <a href="#" class="btn custom-btn">--}}
-{{--                                    Subscribe--}}
-{{--                                </a>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-
-{{--                        <div class="custom-block-info">--}}
-{{--                            <div class="custom-block-top d-flex mb-1">--}}
-{{--                                <small class="me-4">--}}
-{{--                                    <i class="bi-clock-fill custom-icon"></i>--}}
-{{--                                    50 Minutes--}}
-{{--                                </small>--}}
-
-{{--                                <small>Episode <span class="badge">15</span></small>--}}
-{{--                            </div>--}}
-
-{{--                            <h5 class="mb-2">--}}
-{{--                                <a href="detail-page.html">--}}
-{{--                                    Modern Vintage--}}
-{{--                                </a>--}}
-{{--                            </h5>--}}
-
-{{--                            <div class="profile-block d-flex">--}}
-{{--                                <img src="images/profile/woman-posing-black-dress-medium-shot.jpg" class="profile-block-image img-fluid" alt="">--}}
-
-{{--                                <p>--}}
-{{--                                    Elsa--}}
-{{--                                    <img src="images/verified.png" class="verified-image img-fluid" alt="">--}}
-{{--                                    <strong>Influencer</strong></p>--}}
-{{--                            </div>--}}
-
-{{--                            <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>--}}
-
-{{--                            <div class="custom-block-bottom d-flex justify-content-between mt-3">--}}
-{{--                                <a href="#" class="bi-headphones me-1">--}}
-{{--                                    <span>120k</span>--}}
-{{--                                </a>--}}
-
-{{--                                <a href="#" class="bi-heart me-1">--}}
-{{--                                    <span>42.5k</span>--}}
-{{--                                </a>--}}
-
-{{--                                <a href="#" class="bi-chat me-1">--}}
-{{--                                    <span>11k</span>--}}
-{{--                                </a>--}}
-
-{{--                                <a href="#" class="bi-download">--}}
-{{--                                    <span>50k</span>--}}
-{{--                                </a>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-
-{{--                        <div class="d-flex flex-column ms-auto">--}}
-{{--                            <a href="#" class="badge ms-auto">--}}
-{{--                                <i class="bi-heart"></i>--}}
-{{--                            </a>--}}
-
-{{--                            <a href="#" class="badge ms-auto">--}}
-{{--                                <i class="bi-bookmark"></i>--}}
-{{--                            </a>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-
-{{--                <div class="col-lg-6 col-12">--}}
-{{--                    <div class="custom-block d-flex">--}}
-{{--                        <div class="">--}}
-{{--                            <div class="custom-block-icon-wrap">--}}
-{{--                                <div class="section-overlay"></div>--}}
-{{--                                <a href="detail-page.html" class="custom-block-image-wrap">--}}
-{{--                                    <img src="images/podcast/12577967_02.jpg" class="custom-block-image img-fluid" alt="">--}}
-
-{{--                                    <a href="#" class="custom-block-icon">--}}
-{{--                                        <i class="bi-play-fill"></i>--}}
-{{--                                    </a>--}}
-{{--                                </a>--}}
-{{--                            </div>--}}
-
-{{--                            <div class="mt-2">--}}
-{{--                                <a href="#" class="btn custom-btn">--}}
-{{--                                    Subscribe--}}
-{{--                                </a>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-
-{{--                        <div class="custom-block-info">--}}
-{{--                            <div class="custom-block-top d-flex mb-1">--}}
-{{--                                <small class="me-4">--}}
-{{--                                    <i class="bi-clock-fill custom-icon"></i>--}}
-{{--                                    15 Minutes--}}
-{{--                                </small>--}}
-
-{{--                                <small>Episode <span class="badge">45</span></small>--}}
-{{--                            </div>--}}
-
-{{--                            <h5 class="mb-2">--}}
-{{--                                <a href="detail-page.html">--}}
-{{--                                    Daily Talk--}}
-{{--                                </a>--}}
-{{--                            </h5>--}}
-
-{{--                            <div class="profile-block d-flex">--}}
-{{--                                <img src="images/profile/handsome-asian-man-listening-music-through-headphones.jpg" class="profile-block-image img-fluid" alt="">--}}
-
-{{--                                <p>William--}}
-{{--                                    <strong>Vlogger</strong></p>--}}
-{{--                            </div>--}}
-
-{{--                            <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>--}}
-
-{{--                            <div class="custom-block-bottom d-flex justify-content-between mt-3">--}}
-{{--                                <a href="#" class="bi-headphones me-1">--}}
-{{--                                    <span>140k</span>--}}
-{{--                                </a>--}}
-
-{{--                                <a href="#" class="bi-heart me-1">--}}
-{{--                                    <span>22.4k</span>--}}
-{{--                                </a>--}}
-
-{{--                                <a href="#" class="bi-chat me-1">--}}
-{{--                                    <span>16k</span>--}}
-{{--                                </a>--}}
-
-{{--                                <a href="#" class="bi-download">--}}
-{{--                                    <span>62k</span>--}}
-{{--                                </a>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-
-{{--                        <div class="d-flex flex-column ms-auto">--}}
-{{--                            <a href="#" class="badge ms-auto">--}}
-{{--                                <i class="bi-heart"></i>--}}
-{{--                            </a>--}}
-
-{{--                            <a href="#" class="badge ms-auto">--}}
-{{--                                <i class="bi-bookmark"></i>--}}
-{{--                            </a>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </section>--}}
-
-
-    <section class="topics-section section-padding pb-0" id="section_3">
+    <div class="visit-country">
         <div class="container">
             <div class="row">
-
-                <div class="col-lg-12 col-12">
-                    <div class="section-title-wrap mb-5">
-                        <h4 class="section-title">Topics</h4>
+                <div class="col-lg-5">
+                    <div class="section-heading">
+                        <h2>Visit One Of Our Countries Now</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
                     </div>
                 </div>
-
-                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-                    <div class="custom-block custom-block-overlay">
-                        <a href="detail-page.html" class="custom-block-image-wrap">
-                            <img src="images/topics/physician-consulting-his-patient-clinic.jpg" class="custom-block-image img-fluid" alt="">
-                        </a>
-
-                        <div class="custom-block-info custom-block-overlay-info">
-                            <h5 class="mb-1">
-                                <a href="listing-page.html">
-                                    Productivity
-                                </a>
-                            </h5>
-
-                            <p class="badge mb-0">50 Episodes</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-                    <div class="custom-block custom-block-overlay">
-                        <a href="detail-page.html" class="custom-block-image-wrap">
-                            <img src="images/topics/repairman-doing-air-conditioner-service.jpg" class="custom-block-image img-fluid" alt="">
-                        </a>
-
-                        <div class="custom-block-info custom-block-overlay-info">
-                            <h5 class="mb-1">
-                                <a href="listing-page.html">
-                                    Technician
-                                </a>
-                            </h5>
-
-                            <p class="badge mb-0">12 Episodes</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-                    <div class="custom-block custom-block-overlay">
-                        <a href="detail-page.html" class="custom-block-image-wrap">
-                            <img src="images/topics/woman-practicing-yoga-mat-home.jpg" class="custom-block-image img-fluid" alt="">
-                        </a>
-
-                        <div class="custom-block-info custom-block-overlay-info">
-                            <h5 class="mb-1">
-                                <a href="listing-page.html">
-                                    Mindfullness
-                                </a>
-                            </h5>
-
-                            <p class="badge mb-0">35 Episodes</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-                    <div class="custom-block custom-block-overlay">
-                        <a href="detail-page.html" class="custom-block-image-wrap">
-                            <img src="images/topics/delicious-meal-with-sambal-arrangement.jpg" class="custom-block-image img-fluid" alt="">
-                        </a>
-
-                        <div class="custom-block-info custom-block-overlay-info">
-                            <h5 class="mb-1">
-                                <a href="listing-page.html">
-                                    Cooking
-                                </a>
-                            </h5>
-
-                            <p class="badge mb-0">12 Episodes</p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </div>
-    </section>
-
-
-    <section class="trending-podcast-section section-padding">
-        <div class="container">
             <div class="row">
-
-                <div class="col-lg-12 col-12">
-                    <div class="section-title-wrap mb-5">
-                        <h4 class="section-title">Trending episodes</h4>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-12 mb-4 mb-lg-0">
-                    <div class="custom-block custom-block-full">
-                        <div class="custom-block-image-wrap">
-                            <a href="detail-page.html">
-                                <img src="images/podcast/27376480_7326766.jpg" class="custom-block-image img-fluid" alt="">
-                            </a>
-                        </div>
-
-                        <div class="custom-block-info">
-                            <h5 class="mb-2">
-                                <a href="detail-page.html">
-                                    Vintage Show
-                                </a>
-                            </h5>
-
-                            <div class="profile-block d-flex">
-                                <img src="images/profile/woman-posing-black-dress-medium-shot.jpg" class="profile-block-image img-fluid" alt="">
-
-                                <p>Elsa
-                                    <strong>Influencer</strong></p>
+                <div class="col-lg-8">
+                    <div class="items">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="item">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-sm-5">
+                                            <div class="image">
+                                                <img src="assets/images/country-01.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8 col-sm-7">
+                                            <div class="right-content">
+                                                <h4>SWITZERLAND</h4>
+                                                <span>Europe</span>
+                                                <div class="main-button">
+                                                    <a href="/about">Explore More</a>
+                                                </div>
+                                                <p>Woox Travel is a professional Bootstrap 5 theme HTML CSS layout for your website. You can use this layout for your commercial work.</p>
+                                                <ul class="info">
+                                                    <li><i class="fa fa-user"></i> 8.66 Mil People</li>
+                                                    <li><i class="fa fa-globe"></i> 41.290 km2</li>
+                                                    <li><i class="fa fa-home"></i> $1.100.200</li>
+                                                </ul>
+                                                <div class="text-button">
+                                                    <a href="/about">Need Directions ? <i class="fa fa-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-
-                            <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-
-                            <div class="custom-block-bottom d-flex justify-content-between mt-3">
-                                <a href="#" class="bi-headphones me-1">
-                                    <span>100k</span>
-                                </a>
-
-                                <a href="#" class="bi-heart me-1">
-                                    <span>2.5k</span>
-                                </a>
-
-                                <a href="#" class="bi-chat me-1">
-                                    <span>924k</span>
-                                </a>
+                            <div class="col-lg-12">
+                                <div class="item">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-sm-5">
+                                            <div class="image">
+                                                <img src="assets/images/country-02.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8 col-sm-7">
+                                            <div class="right-content">
+                                                <h4>CARIBBEAN</h4>
+                                                <span>North America</span>
+                                                <div class="main-button">
+                                                    <a href="/about">Explore More</a>
+                                                </div>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+                                                <ul class="info">
+                                                    <li><i class="fa fa-user"></i> 44.48 Mil People</li>
+                                                    <li><i class="fa fa-globe"></i> 275.400 km2</li>
+                                                    <li><i class="fa fa-home"></i> $946.000</li>
+                                                </ul>
+                                                <div class="text-button">
+                                                    <a href="/about">Need Directions ? <i class="fa fa-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="social-share d-flex flex-column ms-auto">
-                            <a href="#" class="badge ms-auto">
-                                <i class="bi-heart"></i>
-                            </a>
-
-                            <a href="#" class="badge ms-auto">
-                                <i class="bi-bookmark"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-12 mb-4 mb-lg-0">
-                    <div class="custom-block custom-block-full">
-                        <div class="custom-block-image-wrap">
-                            <a href="detail-page.html">
-                                <img src="images/podcast/27670664_7369753.jpg" class="custom-block-image img-fluid" alt="">
-                            </a>
-                        </div>
-
-                        <div class="custom-block-info">
-                            <h5 class="mb-2">
-                                <a href="detail-page.html">
-                                    Vintage Show
-                                </a>
-                            </h5>
-
-                            <div class="profile-block d-flex">
-                                <img src="images/profile/cute-smiling-woman-outdoor-portrait.jpg" class="profile-block-image img-fluid" alt="">
-
-                                <p>
-                                    Taylor
-                                    <strong>Creator</strong>
-                                </p>
+                            <div class="col-lg-12">
+                                <div class="item last-item">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-sm-5">
+                                            <div class="image">
+                                                <img src="assets/images/country-03.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8 col-sm-7">
+                                            <div class="right-content">
+                                                <h4>FRANCE</h4>
+                                                <span>Europe</span>
+                                                <div class="main-button">
+                                                    <a href="/about">Explore More</a>
+                                                </div>
+                                                <p>We hope this WoOx template is useful for you, please support us a <a href="https://paypal.me/templatemo" target="_blank">small amount of PayPal</a> to info [at] templatemo.com for our survival. We really appreciate your contribution.</p>
+                                                <ul class="info">
+                                                    <li><i class="fa fa-user"></i> 67.41 Mil People</li>
+                                                    <li><i class="fa fa-globe"></i> 551.500 km2</li>
+                                                    <li><i class="fa fa-home"></i> $425.600</li>
+                                                </ul>
+                                                <div class="text-button">
+                                                    <a href="/about">Need Directions ? <i class="fa fa-arrow-right"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-
-                            <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-
-                            <div class="custom-block-bottom d-flex justify-content-between mt-3">
-                                <a href="#" class="bi-headphones me-1">
-                                    <span>100k</span>
-                                </a>
-
-                                <a href="#" class="bi-heart me-1">
-                                    <span>2.5k</span>
-                                </a>
-
-                                <a href="#" class="bi-chat me-1">
-                                    <span>924k</span>
-                                </a>
+                            <div class="col-lg-12">
+                                <ul class="page-numbers">
+                                    <li><a href="#"><i class="fa fa-arrow-left"></i></a></li>
+                                    <li><a href="#">1</a></li>
+                                    <li class="active"><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#"><i class="fa fa-arrow-right"></i></a></li>
+                                </ul>
                             </div>
-                        </div>
-
-                        <div class="social-share d-flex flex-column ms-auto">
-                            <a href="#" class="badge ms-auto">
-                                <i class="bi-heart"></i>
-                            </a>
-
-                            <a href="#" class="badge ms-auto">
-                                <i class="bi-bookmark"></i>
-                            </a>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-4 col-12">
-                    <div class="custom-block custom-block-full">
-                        <div class="custom-block-image-wrap">
-                            <a href="detail-page.html">
-                                <img src="images/podcast/12577967_02.jpg" class="custom-block-image img-fluid" alt="">
-                            </a>
-                        </div>
-
-                        <div class="custom-block-info">
-                            <h5 class="mb-2">
-                                <a href="detail-page.html">
-                                    Daily Talk
-                                </a>
-                            </h5>
-
-                            <div class="profile-block d-flex">
-                                <img src="images/profile/handsome-asian-man-listening-music-through-headphones.jpg" class="profile-block-image img-fluid" alt="">
-
-                                <p>
-                                    William
-                                    <strong>Vlogger</strong></p>
+                <div class="col-lg-4">
+                    <div class="side-bar-map">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div id="map">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12469.776493332698!2d-80.14036379941481!3d25.907788681148624!2m3!1f357.26927939317244!2f20.870722720054623!3f0!3m2!1i1024!2i768!4f35!3m3!1m2!1s0x88d9add4b4ac788f%3A0xe77469d09480fcdb!2sSunny%20Isles%20Beach!5e1!3m2!1sen!2sth!4v1642869952544!5m2!1sen!2sth" width="100%" height="550px" frameborder="0" style="border:0; border-radius: 23px; " allowfullscreen=""></iframe>
+                                </div>
                             </div>
-
-                            <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-
-                            <div class="custom-block-bottom d-flex justify-content-between mt-3">
-                                <a href="#" class="bi-headphones me-1">
-                                    <span>100k</span>
-                                </a>
-
-                                <a href="#" class="bi-heart me-1">
-                                    <span>2.5k</span>
-                                </a>
-
-                                <a href="#" class="bi-chat me-1">
-                                    <span>924k</span>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="social-share d-flex flex-column ms-auto">
-                            <a href="#" class="badge ms-auto">
-                                <i class="bi-heart"></i>
-                            </a>
-
-                            <a href="#" class="badge ms-auto">
-                                <i class="bi-bookmark"></i>
-                            </a>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
-    </section>
+    </div>
+    <script>
+        function bannerSwitcher() {
+            next = $('.sec-1-input').filter(':checked').next('.sec-1-input');
+            if (next.length) next.prop('checked', true);
+            else $('.sec-1-input').first().prop('checked', true);
+        }
+
+        var bannerTimer = setInterval(bannerSwitcher, 5000);
+
+        $('nav .controls label').click(function() {
+            clearInterval(bannerTimer);
+            bannerTimer = setInterval(bannerSwitcher, 5000)
+        });
+    </script>
+
 @endsection
-
