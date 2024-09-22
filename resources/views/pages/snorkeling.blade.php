@@ -61,7 +61,7 @@
                     <div class="row mt-4">
                         <div class="col-lg-12">
                             <div class="main-button text-center">
-                                <a href="deals.html">Make a Reservation</a>
+                                <a href="/reservation">Make a Reservation</a>
                             </div>
                         </div>
                     </div>

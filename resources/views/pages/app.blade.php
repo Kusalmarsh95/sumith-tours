@@ -48,8 +48,8 @@
                         <li><a href="/">Home</a></li>
                         <li><a href="/about">About</a></li>
                         <li><a href="deals.html">Services</a></li>
-                        <li><a href="reservation.html">Itinerary</a></li>
-                        <li><a href="reservation.html">Reservation</a></li>
+                        <li><a href="/itinerary">Itinerary</a></li>
+                        <li><a href="/reservation">Reservation</a></li>
                     </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>

@@ -8,6 +8,15 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('pages.about');
 });
+Route::get('/itinerary', function () {
+    return view('pages.itinerary');
+});
+Route::get('/reservation', function () {
+    return view('pages.reservation');
+});
+Route::get('/services', function () {
+    return view('pages.services');
+});
 Route::get('/adventure', function () {
     return view('pages.adventure');
 });
