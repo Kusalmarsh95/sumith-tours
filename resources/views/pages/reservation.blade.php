@@ -47,56 +47,69 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <form id="reservation-form" name="gs" method="submit" role="search" action="#">
+                    <form id="reservation-form" name="gs" role="search" action="{{ route('reservation.store') }}" method="POST">
+                        @csrf
                         <div class="row">
                             <div class="col-lg-12">
                                 <h4>Make Your <em>Reservation</em></h4>
                             </div>
                             <div class="col-lg-6">
                                 <fieldset>
-                                    <label for="Name" class="form-label">Your Name</label>
-                                    <input type="text" name="Name" class="Name" placeholder="Ex. John Smithee" autocomplete="on" required>
+                                    <label for="name" class="form-label">Your Name</label>
+                                    <input type="text" name="name" class="Name" placeholder="Name" autocomplete="on" required>
                                 </fieldset>
                             </div>
                             <div class="col-lg-6">
                                 <fieldset>
-                                    <label for="Number" class="form-label">Your Phone Number</label>
-                                    <input type="text" name="Number" class="Number" placeholder="Ex. +xxx xxx xxx" autocomplete="on" required>
+                                    <label for="number" class="form-label">WhatsApp Phone Number</label>
+                                    <input type="text" name="number" class="Number" placeholder="+xxx xxx xxx" autocomplete="on" required>
                                 </fieldset>
                             </div>
                             <div class="col-lg-6">
                                 <fieldset>
-                                    <label for="chooseGuests" class="form-label">Number Of Guests</label>
-                                    <select name="Guests" class="form-select" aria-label="Default select example" id="chooseGuests" onChange="this.form.click()">
-                                        <option selected>ex. 3 or 4 or 5</option>
-                                        <option type="checkbox" name="option1" value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4+">4+</option>
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="text" name="email" class="Email" placeholder="example@mail.com" autocomplete="on" required>
+                                </fieldset>
+                            </div>
+                            <div class="col-lg-6">
+                                <fieldset>
+                                    <label for="country" class="form-label">Your Country</label>
+                                    <input type="text" name="country" class="Country" placeholder="Country" autocomplete="on" required>
+                                </fieldset>
+                            </div>
+                            <div class="col-lg-6">
+                                <fieldset>
+                                    <label for="category" class="form-label">Tour Category</label>
+                                    <select name="category" class="form-select" aria-label="Default select example" id="category" onChange="this.form.click()">
+                                        <option selected>Select Category</option>
+                                        <option value="Adventure Tour">Adventure Tour</option>
+                                        <option value="Safari">Safari</option>
+                                        <option value="Snorkeling">Snorkeling</option>
+{{--                                        <option value="4+">4+</option>--}}
                                     </select>
                                 </fieldset>
                             </div>
                             <div class="col-lg-6">
                                 <fieldset>
-                                    <label for="Number" class="form-label">Check In Date</label>
+                                    <label for="date" class="form-label">Check In Date</label>
                                     <input type="date" name="date" class="date" required>
                                 </fieldset>
                             </div>
+{{--                            <div class="col-lg-12">--}}
+{{--                                <fieldset>--}}
+{{--                                    <label for="chooseDestination" class="form-label">Choose Your Destination</label>--}}
+{{--                                    <select name="Destination" class="form-select" aria-label="Default select example" id="chooseCategory" onChange="this.form.click()">--}}
+{{--                                        <option selected>ex. Switzerland, Lausanne</option>--}}
+{{--                                        <option value="Italy, Roma">Italy, Roma</option>--}}
+{{--                                        <option value="France, Paris">France, Paris</option>--}}
+{{--                                        <option value="Engaland, London">Engaland, London</option>--}}
+{{--                                        <option value="Switzerland, Lausanne">Switzerland, Lausanne</option>--}}
+{{--                                    </select>--}}
+{{--                                </fieldset>--}}
+{{--                            </div>--}}
                             <div class="col-lg-12">
                                 <fieldset>
-                                    <label for="chooseDestination" class="form-label">Choose Your Destination</label>
-                                    <select name="Destination" class="form-select" aria-label="Default select example" id="chooseCategory" onChange="this.form.click()">
-                                        <option selected>ex. Switzerland, Lausanne</option>
-                                        <option value="Italy, Roma">Italy, Roma</option>
-                                        <option value="France, Paris">France, Paris</option>
-                                        <option value="Engaland, London">Engaland, London</option>
-                                        <option value="Switzerland, Lausanne">Switzerland, Lausanne</option>
-                                    </select>
-                                </fieldset>
-                            </div>
-                            <div class="col-lg-12">
-                                <fieldset>
-                                    <button class="main-button">Make Your Reservation Now</button>
+                                    <button type="submit" class="main-button">Make Your Reservation Now</button>
                                 </fieldset>
                             </div>
                         </div>
