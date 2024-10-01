@@ -404,6 +404,95 @@
             </div>
         </div>
     </div>
+    <div class="cities-town">
+        <div class="container">
+            <div class="row">
+                <div class="slider-content">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h5>Customer Reviews</h5>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="owl-cites-town owl-carousel">
+                                <div class="item">
+                                    <div class="text" style="background-color: #c6f1f2; border: 1px solid #a4ebed ; border-radius: 10px; padding: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                                        <h6>Jack nile</h6>
+                                        <div class="line-dec"></div>
+                                        <ul>
+                                            <p>comment</p>
+                                        </ul>
+                                        <ul>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="text" style="background-color: #c6f1f2; border: 1px solid #a4ebed ; border-radius: 10px; padding: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                                        <h6>Jack nile</h6>
+                                        <div class="line-dec"></div>
+                                        <ul>
+                                            <p>comment</p>
+                                        </ul>
+                                        <ul>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="text" style="background-color: #c6f1f2; border: 1px solid #a4ebed ; border-radius: 10px; padding: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                                        <h6>Jack nile</h6>
+                                        <div class="line-dec"></div>
+                                        <ul>
+                                            <p>comment</p>
+                                        </ul>
+                                        <ul>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="text" style="background-color: #c6f1f2; border: 1px solid #a4ebed ; border-radius: 10px; padding: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                                        <h6>Jack nile</h6>
+                                        <div class="line-dec"></div>
+                                        <ul>
+                                            <p>comment</p>
+                                        </ul>
+                                        <ul>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-lg-12">
+                            <div class="main-button text-center">
+                                <a href="deals.html">More Comments</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         function bannerSwitcher() {
             next = $('.sec-1-input').filter(':checked').next('.sec-1-input');

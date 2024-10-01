@@ -2327,3 +2327,7 @@ body {
     padding: 0px;
   }
 }
+
+.checked {
+    color: orange;
+}
