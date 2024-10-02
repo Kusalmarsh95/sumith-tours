@@ -484,7 +484,7 @@
                     <div class="row mt-4">
                         <div class="col-lg-12">
                             <div class="main-button text-center">
-                                <a href="deals.html">More Comments</a>
+                                <a href="/review">More Comments</a>
                             </div>
                         </div>
                     </div>
