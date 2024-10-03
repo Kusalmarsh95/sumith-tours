@@ -2,13 +2,13 @@
 
 @section('content')
     <!-- ***** Main Banner Area Start ***** -->
-    <div class="about-main-content" style="background-image: url('/images/amazon-review.png');">
+    <div class="about-main-content" style="background-image: url('/images/the-Gallery.jpg');">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="content">
-                        <div class="blur-bg" style="background-image: url('/images/amazon-review.png');"></div>
-                        <h2>Customer Reviews</h2>
+                        <div class="blur-bg" style="background-image: url('/images/the-Gallery.jpg');"></div>
+                        <h2>Image Gallery</h2>
                         <div class="line-dec"></div>
 
                     </div>
@@ -21,81 +21,36 @@
             <div class="row">
                 <div class="slider-content">
                     <div class="row">
-                        <div class="row">
-                            @foreach($reviews as $review)
-                                <div class="item col-md-6 mb-1">
-                                    <div class="text" style="background-color: #c6f1f2; border: 1px solid #a4ebed; border-radius: 10px; padding: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
-                                        <h5>{{ $review->customer_name }} <small class="text-muted"> from {{ $review->country }}</small></h5>
-                                        <h6><small class="text-muted">@ {{ $review->created_at->diffForHumans() }}</small></h6>
-                                        <div class="line-dec"></div>
-                                        <ul>
-                                            <li>{{ $review->review }}</li>
-                                        </ul>
-                                        <ul>
-                                            @for($i = 1; $i <= 5; $i++)
-                                                <span class="fa fa-star {{ $i <= $review->rating ? 'checked' : '' }}"></span>
-                                            @endfor
-                                        </ul>
-                                    </div>
-                                </div>
-                            @endforeach
-                        </div>
-                        <div class="reservation-form">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <form id="reservation-form" name="gs" role="search" action="{{ route('review.store') }}" method="POST">
-                                            @csrf
-                                            <div class="row">
-                                                <div class="col-lg-12">
-                                                    <h4>Your <em>Comment</em></h4>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <fieldset>
-                                                        <label for="customer_name" class="form-label">Your Name</label>
-                                                        <input type="text" name="customer_name" placeholder="Name" autocomplete="on" required>
-                                                    </fieldset>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <fieldset>
-                                                        <label for="country" class="form-label">Your Country</label>
-                                                        <input type="text" name="country" placeholder="Country" autocomplete="on" required>
-                                                    </fieldset>
-                                                </div>
-                                                <div class="col-lg-12">
-                                                    <fieldset>
-                                                        <label for="review" class="form-label">Comment</label>
-                                                        <input type="text" name="review" placeholder="Comment" required>
-                                                    </fieldset>
-                                                </div>
-                                                <div class="col-lg-6 mx-auto">
-                                                    <fieldset>
-{{--                                                        <label for="date" class="form-label">Rating</label>--}}
-                                                        <div class=" d-flex justify-content-center mt-1">
-                                                            <div class=" text-center mb-2">
-                                                                <div class="rating">
-                                                                    <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label>
-                                                                    <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label>
-                                                                    <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label>
-                                                                    <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label>
-                                                                    <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </fieldset>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6 mx-auto">
-                                                <fieldset>
-                                                    <button type="submit" class="main-button">Submit</button>
-                                                </fieldset>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
+                        <div class="item col-md-4 mb-1">
+                            <div class="text" style="background-color: #c6f1f2; border: 1px solid #a4ebed; border-radius: 10px; padding: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); text-align: center;">
+                                <img src="images/boattour.jpg" alt="Image 1" class="img-fluid" style="width: 100%; height: auto; max-width: 350px; max-height: 350px; object-fit: cover;">
                             </div>
                         </div>
-
+                        <div class="item col-md-4 mb-1">
+                            <div class="text" style="background-color: #c6f1f2; border: 1px solid #a4ebed; border-radius: 10px; padding: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); text-align: center;">
+                                <img src="images/feedfish.jpg" alt="Image 2" class="img-fluid" style="width: 100%; height: auto; max-width: 350px; max-height: 350px; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="item col-md-4 mb-1">
+                            <div class="text" style="background-color: #c6f1f2; border: 1px solid #a4ebed; border-radius: 10px; padding: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); text-align: center;">
+                                <img src="images/girls-koh-nang.jpg" alt="Image 3" class="img-fluid" style="width: 100%; height: auto; max-width: 350px; max-height: 350px; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="item col-md-4 mb-1">
+                            <div class="text" style="background-color: #c6f1f2; border: 1px solid #a4ebed; border-radius: 10px; padding: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); text-align: center;">
+                                <img src="images/boattour.jpg" alt="Image 1" class="img-fluid" style="width: 100%; height: auto; max-width: 350px; max-height: 350px; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="item col-md-4 mb-1">
+                            <div class="text" style="background-color: #c6f1f2; border: 1px solid #a4ebed; border-radius: 10px; padding: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); text-align: center;">
+                                <img src="images/feedfish.jpg" alt="Image 2" class="img-fluid" style="width: 100%; height: auto; max-width: 350px; max-height: 350px; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="item col-md-4 mb-1">
+                            <div class="text" style="background-color: #c6f1f2; border: 1px solid #a4ebed; border-radius: 10px; padding: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); text-align: center;">
+                                <img src="images/girls-koh-nang.jpg" alt="Image 3" class="img-fluid" style="width: 100%; height: auto; max-width: 350px; max-height: 350px; object-fit: cover;">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

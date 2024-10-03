@@ -10,7 +10,7 @@ class ReviewController extends Controller
     public function index()
     {
         $reviews = Review::all();
-        return view('reviews.index', compact('reviews'));
+        return view('pages.review', compact('reviews'));
     }
 
     public function store(Request $request)

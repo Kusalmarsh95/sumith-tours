@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\PageController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\ReviewController;
 use Illuminate\Support\Facades\Route;
@@ -14,9 +15,6 @@ Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->na
 Route::post('/register', [RegisterController::class, 'register']);
 
 
-Route::get('/', function () {
-    return view('pages.home');
-});
 Route::get('/about', function () {
     return view('pages.about');
 });
@@ -47,12 +45,13 @@ Route::get('/snorkeling', function () {
 Route::get('/snorkeling', function () {
     return view('pages.snorkeling');
 });
-Route::get('/review', function () {
-    return view('pages.review');
+Route::get('/gallery', function () {
+    return view('pages.gallery');
 });
+Route::get('/', [PageController::class, 'home'])->name('home');
 
 
-Route::get('/reservation', [ReservationController::class, 'create'])->name('reservation.create');
+Route::get('/reservation', [ReservationController::class, 'create'])->name('reservation');
 Route::post('/reservation', [ReservationController::class, 'store'])->name('reservation.store');
-Route::get('/reviews', [ReviewController::class, 'index']);
-Route::post('/reviews', [ReviewController::class, 'store']);
+Route::get('/reviews', [ReviewController::class, 'index'])->name('reviews');;
+Route::post('/reviews', [ReviewController::class, 'store'])->name('review.store');;

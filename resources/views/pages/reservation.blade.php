@@ -95,19 +95,7 @@
                                     <input type="date" name="date" class="date" required>
                                 </fieldset>
                             </div>
-{{--                            <div class="col-lg-12">--}}
-{{--                                <fieldset>--}}
-{{--                                    <label for="chooseDestination" class="form-label">Choose Your Destination</label>--}}
-{{--                                    <select name="Destination" class="form-select" aria-label="Default select example" id="chooseCategory" onChange="this.form.click()">--}}
-{{--                                        <option selected>ex. Switzerland, Lausanne</option>--}}
-{{--                                        <option value="Italy, Roma">Italy, Roma</option>--}}
-{{--                                        <option value="France, Paris">France, Paris</option>--}}
-{{--                                        <option value="Engaland, London">Engaland, London</option>--}}
-{{--                                        <option value="Switzerland, Lausanne">Switzerland, Lausanne</option>--}}
-{{--                                    </select>--}}
-{{--                                </fieldset>--}}
-{{--                            </div>--}}
-                            <div class="col-lg-12">
+                            <div class="col-lg-6 mx-auto">
                                 <fieldset>
                                     <button type="submit" class="main-button">Make Your Reservation Now</button>
                                 </fieldset>

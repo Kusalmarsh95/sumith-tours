@@ -409,82 +409,34 @@
             <div class="row">
                 <div class="slider-content">
                     <div class="row">
-                        <div class="col-lg-12">
-                            <h5>Customer Reviews</h5>
+                        <div class="col-lg-12 mb-2">
+                            <h4>Customer Reviews</h4>
                         </div>
                         <div class="col-lg-12">
                             <div class="owl-cites-town owl-carousel">
-                                <div class="item">
-                                    <div class="text" style="background-color: #c6f1f2; border: 1px solid #a4ebed ; border-radius: 10px; padding: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
-                                        <h6>Jack nile</h6>
-                                        <div class="line-dec"></div>
-                                        <ul>
-                                            <p>comment</p>
-                                        </ul>
-                                        <ul>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star"></span>
-                                        </ul>
+                                @foreach($reviews as $review)
+                                    <div class="item">
+                                        <div class="text" style="background-color: #c6f1f2; border: 1px solid #a4ebed ; border-radius: 10px; padding: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                                            <h6>{{ $review->customer_name }}  <small class="text-muted">@ {{ $review->created_at->diffForHumans() }}</small></h6>
+                                            <div class="line-dec"></div>
+                                            <ul>
+                                                <p>From {{ $review->country }}</p>
+                                            </ul>
+                                            <ul>
+                                                @for($i = 1; $i <= 5; $i++)
+                                                    <span class="fa fa-star {{ $i <= $review->rating ? 'checked' : '' }}"></span>
+                                                @endfor
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="item">
-                                    <div class="text" style="background-color: #c6f1f2; border: 1px solid #a4ebed ; border-radius: 10px; padding: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
-                                        <h6>Jack nile</h6>
-                                        <div class="line-dec"></div>
-                                        <ul>
-                                            <p>comment</p>
-                                        </ul>
-                                        <ul>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="text" style="background-color: #c6f1f2; border: 1px solid #a4ebed ; border-radius: 10px; padding: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
-                                        <h6>Jack nile</h6>
-                                        <div class="line-dec"></div>
-                                        <ul>
-                                            <p>comment</p>
-                                        </ul>
-                                        <ul>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star"></span>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="text" style="background-color: #c6f1f2; border: 1px solid #a4ebed ; border-radius: 10px; padding: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
-                                        <h6>Jack nile</h6>
-                                        <div class="line-dec"></div>
-                                        <ul>
-                                            <p>comment</p>
-                                        </ul>
-                                        <ul>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </ul>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
                     <div class="row mt-4">
                         <div class="col-lg-12">
                             <div class="main-button text-center">
-                                <a href="/review">More Comments</a>
+                                <a href="/reviews">More Comments</a>
                             </div>
                         </div>
                     </div>

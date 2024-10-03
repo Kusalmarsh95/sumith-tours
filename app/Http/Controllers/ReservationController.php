@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ReservationMail;
+use App\Models\Reservation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -14,21 +16,17 @@ class ReservationController extends Controller
 
     public function store(Request $request)
     {
-//        dd($request);
         $request->validate([
-            'name' => 'required|string|max:255',
-            'number' => 'required|email|max:255',
-            'email' => 'required|email|max:255',
-            'date' => 'required|date',
+            'name' => 'required|string|max:150',
+            'number' => 'required|max:20',
+            'email' => 'required|email|max:100',
+            'date' => 'required',
             'category' => 'required',
             'country' => 'required',
         ]);
+        $reservation = Reservation::create($request->all());
 
-        // Send email to the owner
-        Mail::raw("New Request:\n\nName: {$request->name}\nWhatsApp Number: {$request->number}\nEmail: {$request->email}\nCountry: {$request->country}\nDate: {$request->date}\nTour Category: {$request->category}", function ($message) {
-            $message->to('kusalmarsh95@gmail.com')
-                ->subject('New Tour Request');
-        });
+        Mail::to('kusalmarsh95@gmail.com')->send(new ReservationMail($reservation));
 
         return redirect()->back()->with('success', 'Reservation submitted successfully!');
     }
