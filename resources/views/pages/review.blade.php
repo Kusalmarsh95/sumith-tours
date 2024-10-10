@@ -2,12 +2,12 @@
 
 @section('content')
     <!-- ***** Main Banner Area Start ***** -->
-    <div class="about-main-content" style="background-image: url('/images/amazon-review.png');">
+    <div class="about-main-content" style="background-image: url({{ asset('/images/amazon-review.png') }});">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="content">
-                        <div class="blur-bg" style="background-image: url('/images/amazon-review.png');"></div>
+                        <div class="blur-bg" style="background-image: url({{ asset('/images/amazon-review.png') }});"></div>
                         <h2>Customer Reviews</h2>
                         <div class="line-dec"></div>
 

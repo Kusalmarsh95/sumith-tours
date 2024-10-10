@@ -187,7 +187,8 @@
                                     <div class="row">
                                         <div class="col-lg-4 col-sm-5">
                                             <div class="image">
-                                                <img src="/images/adventure_01.jpg" alt="">
+                                                <img src="{{ asset("images/adventure_01.jpg") }}" alt="">
+
                                             </div>
                                         </div>
                                         <div class="col-lg-8 col-sm-7">
@@ -218,7 +219,8 @@
                                     <div class="row">
                                         <div class="col-lg-4 col-sm-5">
                                             <div class="image">
-                                                <img src="/images/safari_01.jpg" alt="">
+                                                <img src="{{ asset("images/safari_01.jpg") }}" alt="">
+
                                             </div>
                                         </div>
                                         <div class="col-lg-8 col-sm-7">
@@ -250,7 +252,8 @@
                                     <div class="row">
                                         <div class="col-lg-4 col-sm-5">
                                             <div class="image">
-                                                <img src="/images/snorkeling_01.jpg" alt="">
+                                                <img src="{{ asset("images/snorkeling_01.jpg") }}" alt="">
+
                                             </div>
                                         </div>
                                         <div class="col-lg-8 col-sm-7">
@@ -325,7 +328,8 @@
                     <div class="owl-weekly-offers owl-carousel">
                         <div class="item">
                             <div class="thumb">
-                                <img src="/images/offers-01.jpg" alt="">
+                                <img src="{{ asset("images/offers-01.jpg") }}" alt="">
+
                                 <div class="text">
                                     <h4>October Tour<br><span><i class="fa fa-users"></i> Any one</span></h4>
 {{--                                    <h6>$420<br><span>/person</span></h6>--}}
@@ -344,7 +348,8 @@
                         </div>
                         <div class="item">
                             <div class="thumb">
-                                <img src="/images/offers-02.jpg" alt="">
+                                <img src="{{ asset("images/offers-02.jpg") }}" alt="">
+
                                 <div class="text">
                                     <h4>November Tour<br><span><i class="fa fa-users"></i> Any one</span></h4>
                                     {{--                                    <h6>$420<br><span>/person</span></h6>--}}
@@ -363,7 +368,7 @@
                         </div>
                         <div class="item">
                             <div class="thumb">
-                                <img src="/images/offers-03.jpg" alt="">
+                                <img src="{{ asset("images/offers-03.jpg") }}" alt="">
                                 <div class="text">
                                     <h4>December Tour<br><span><i class="fa fa-users"></i> Any one</span></h4>
                                     {{--                                    <h6>$420<br><span>/person</span></h6>--}}
@@ -382,7 +387,8 @@
                         </div>
                         <div class="item">
                             <div class="thumb">
-                                <img src="/images/offers-01.jpg" alt="">
+                                <img src="{{ asset("images/offers-01.jpg") }}" alt="">
+
                                 <div class="text">
                                     <h4>September Tour<br><span><i class="fa fa-users"></i> Any one</span></h4>
                                     {{--                                    <h6>$420<br><span>/person</span></h6>--}}

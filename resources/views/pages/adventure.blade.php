@@ -36,25 +36,25 @@
                             <div class="owl-cites-town owl-carousel">
                                 <div class="item">
                                     <div class="thumb">
-                                        <img src="images/cities-01.jpg" alt="">
+                                        <img src="{{ asset('images/cities-01.jpg') }}" alt="">
                                         <h4>Jungle</h4>
                                     </div>
                                 </div>
                                 <div class="item">
                                     <div class="thumb">
-                                        <img src="images/cities-02.jpg" alt="">
+                                        <img src="{{ asset('images/cities-02.jpg') }}" alt="">
                                         <h4>Sea</h4>
                                     </div>
                                 </div>
                                 <div class="item">
                                     <div class="thumb">
-                                        <img src="images/cities-03.jpg" alt="">
+                                        <img src="{{ (asset('images/cities-03.jpg')) }}" alt="">
                                         <h4>Fort</h4>
                                     </div>
                                 </div>
                                 <div class="item">
                                     <div class="thumb">
-                                        <img src="images/cities-04.jpg" alt="">
+                                        <img src="{{ asset('images/cities-04.jpg') }}" alt="">
                                         <h4>Mountain</h4>
                                     </div>
                                 </div>

@@ -20,7 +20,7 @@
 
                 <div class="col-lg-12 col-12">
                     <div class="section-title-wrap mb-4">
-                        <h2 class="section-title">Adventure Tour</h2>
+                        <h2 class="section-title">Cycling</h2>
                     </div>
                 </div>
 
@@ -29,7 +29,7 @@
                         <div class="row">
                             <div class="col-lg-3">
                                 <a class="custom-block-image-wrap">
-                                    <img src="images/topics/lk.jpg" class="custom-block-image img-fluid" alt="">
+                                    <img src="{{ asset('images/lk.jpg') }}" class="custom-block-image img-fluid" alt="">
                                 </a>
                             </div>
                             <div class="col-lg-3">

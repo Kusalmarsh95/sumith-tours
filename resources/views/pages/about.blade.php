@@ -2,12 +2,12 @@
 
 @section('content')
     <!-- ***** Main Banner Area Start ***** -->
-    <div class="about-main-content" style="background-image: url('/images/aboutusbg.jpg');">
+    <div class="about-main-content" style="background-image: url('{{ asset('images/aboutusbg.jpg') }}');">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="content">
-                        <div class="blur-bg" style="background-image: url('/images/aboutusbg.jpg');"></div>
+                        <div class="blur-bg" style="background-image: url('{{ asset('images/aboutusbg.jpg') }}');"></div>
                         <h2>Welcome To Sumith Tours</h2>
                         <div class="line-dec"></div>
 {{--                        <h4>Welcome To Sumith Tours</h4>--}}
