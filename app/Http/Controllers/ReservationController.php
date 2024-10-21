@@ -9,6 +9,11 @@ use Illuminate\Support\Facades\Mail;
 
 class ReservationController extends Controller
 {
+    public function index()
+    {
+        $reservations = Reservation::all();
+        return view('reservations.index', compact('reservations'));
+    }
     public function create()
     {
         return view('pages.reservation');
