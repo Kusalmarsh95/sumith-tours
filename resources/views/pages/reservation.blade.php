@@ -101,12 +101,6 @@
                                 </fieldset>
                             </div>
                         </div>
-                        <li>
-                            <a href="https://wa.me/94777656774?text=Hi%2C%20I%20have%20a%20question%20about%20your%20services"
-                               target="_blank">
-                                <img src="images/social-media-footer/whatsapp.jpg" alt="WhatsApp" />
-                            </a>
-                        </li>
                     </form>
                 </div>
             </div>

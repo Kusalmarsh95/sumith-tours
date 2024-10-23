@@ -31,7 +31,7 @@ class ReservationController extends Controller
         ]);
         $reservation = Reservation::create($request->all());
 
-        Mail::to('kusalmarsh95@gmail.com')->send(new ReservationMail($reservation));
+        Mail::to(['Tourssumith@gmail.com', 'weerasinghebandara88@gmail.com'])->send(new ReservationMail($reservation));
 
         return redirect()->back()->with('success', 'Reservation submitted successfully!');
     }

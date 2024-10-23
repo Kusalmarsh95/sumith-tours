@@ -23,33 +23,48 @@
                     <div class="row">
                         <div class="item col-md-4 mb-1">
                             <div class="text" style="background-color: #c6f1f2; border: 1px solid #a4ebed; border-radius: 10px; padding: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); text-align: center;">
-                                <img src="{{ asset("images/boattour.jpg") }}" alt="Image 1" class="img-fluid" style="width: 100%; height: auto; max-width: 350px; max-height: 350px; object-fit: cover;">
+                                <img src="{{ asset("images/tours/FB_IMG_1729388869880.jpg") }}" alt="Image 1" class="img-fluid" style="width: 100%; height: auto; max-width: 350px; max-height: 350px; object-fit: cover;">
 
                             </div>
                         </div>
                         <div class="item col-md-4 mb-1">
                             <div class="text" style="background-color: #c6f1f2; border: 1px solid #a4ebed; border-radius: 10px; padding: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); text-align: center;">
-                                <img src="{{ asset("images/feedfish.jpg") }}" alt="Image 2" class="img-fluid" style="width: 100%; height: auto; max-width: 350px; max-height: 350px; object-fit: cover;">
+                                <img src="{{ asset("images/tours/FB_IMG_1729388878387.jpg") }}" alt="Image 2" class="img-fluid" style="width: 100%; height: auto; max-width: 350px; max-height: 350px; object-fit: cover;">
                             </div>
                         </div>
                         <div class="item col-md-4 mb-1">
                             <div class="text" style="background-color: #c6f1f2; border: 1px solid #a4ebed; border-radius: 10px; padding: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); text-align: center;">
-                                <img src="{{ asset("images/girls-koh-nang.jpg") }}" alt="Image 3" class="img-fluid" style="width: 100%; height: auto; max-width: 350px; max-height: 350px; object-fit: cover;">
+                                <img src="{{ asset("images/tours/FB_IMG_1729388888339.jpg") }}" alt="Image 3" class="img-fluid" style="width: 100%; height: auto; max-width: 350px; max-height: 350px; object-fit: cover;">
                             </div>
                         </div>
                         <div class="item col-md-4 mb-1">
                             <div class="text" style="background-color: #c6f1f2; border: 1px solid #a4ebed; border-radius: 10px; padding: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); text-align: center;">
-                                <img src="{{ asset("images/boattour.jpg") }}" alt="Image 1" class="img-fluid" style="width: 100%; height: auto; max-width: 350px; max-height: 350px; object-fit: cover;">
+                                <img src="{{ asset("images/tours/IMG-20241011-WA0000.jpg") }}" alt="Image 1" class="img-fluid" style="width: 100%; height: auto; max-width: 350px; max-height: 350px; object-fit: cover;">
                             </div>
                         </div>
                         <div class="item col-md-4 mb-1">
                             <div class="text" style="background-color: #c6f1f2; border: 1px solid #a4ebed; border-radius: 10px; padding: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); text-align: center;">
-                                <img src="{{ asset("images/feedfish.jpg") }}" alt="Image 2" class="img-fluid" style="width: 100%; height: auto; max-width: 350px; max-height: 350px; object-fit: cover;">
+                                <img src="{{ asset("images/tours/FB_IMG_1729388893179.jpg") }}" alt="Image 2" class="img-fluid" style="width: 100%; height: auto; max-width: 350px; max-height: 350px; object-fit: cover;">
                             </div>
                         </div>
                         <div class="item col-md-4 mb-1">
                             <div class="text" style="background-color: #c6f1f2; border: 1px solid #a4ebed; border-radius: 10px; padding: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); text-align: center;">
-                                <img src="{{ asset("images/girls-koh-nang.jpg") }}" alt="Image 3" class="img-fluid" style="width: 100%; height: auto; max-width: 350px; max-height: 350px; object-fit: cover;">
+                                <img src="{{ asset("images/tours/FB_IMG_1729388909256.jpg") }}" alt="Image 3" class="img-fluid" style="width: 100%; height: auto; max-width: 350px; max-height: 350px; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="item col-md-4 mb-1">
+                            <div class="text" style="background-color: #c6f1f2; border: 1px solid #a4ebed; border-radius: 10px; padding: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); text-align: center;">
+                                <img src="{{ asset("images/tours/20241012_095232.jpg") }}" alt="Image 1" class="img-fluid" style="width: 100%; height: auto; max-width: 350px; max-height: 350px; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="item col-md-4 mb-1">
+                            <div class="text" style="background-color: #c6f1f2; border: 1px solid #a4ebed; border-radius: 10px; padding: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); text-align: center;">
+                                <img src="{{ asset("images/tours/IMG-20241014-WA0022.jpg") }}" alt="Image 2" class="img-fluid" style="width: 100%; height: auto; max-width: 350px; max-height: 350px; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="item col-md-4 mb-1">
+                            <div class="text" style="background-color: #c6f1f2; border: 1px solid #a4ebed; border-radius: 10px; padding: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); text-align: center;">
+                                <img src="{{ asset("images/tours/IMG-20240727-WA0075.jpg") }}" alt="Image 3" class="img-fluid" style="width: 100%; height: auto; max-width: 350px; max-height: 350px; object-fit: cover;">
                             </div>
                         </div>
                     </div>

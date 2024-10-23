@@ -6,106 +6,132 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h4>Book Prefered Deal Here</h4>
-                    <h2>Make Your Reservation</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt uttersi labore et dolore magna aliqua is ipsum suspendisse ultrices gravida</p>
-                    <div class="main-button"><a href="about.html">Discover More</a></div>
+                    <h4>Welcome to our Adventure Tour services, where adrenaline meets the great outdoors!</h4>
+                    <h2>Find Preferred Deal From Here</h2>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="more-info reservation-info">
+    <div class="cities-town">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-sm-6">
-                    <div class="info-item">
-                        <i class="fa fa-phone"></i>
-                        <h4>Make a Phone Call</h4>
-                        <a href="#">+123 456 789 (0)</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="info-item">
-                        <i class="fa fa-envelope"></i>
-                        <h4>Contact Us via Email</h4>
-                        <a href="#">company@email.com</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="info-item">
-                        <i class="fa fa-map-marker"></i>
-                        <h4>Visit Our Offices</h4>
-                        <a href="#">24th Street North Avenue London, UK</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ***** Main Banner Area End ***** -->
+                <div class="slider-content">
+                    <div class="visit-country">
+                        <div class="container">
+                            <div class="row">
+                                <div class="section-heading">
+                                    <h2>Travel with us Now</h2>
+                                    <p>Discover the Sri Lanka's top destinations with our expert travel guides!
+                                        We offer insider tips on must-see attractions, local cuisine, and cultural
+                                        experiences. Plan your perfect trip with personalized itineraries, practical advice,
+                                        and travel inspiration for every kind of adventurer.</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="items">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="item">
+                                                    <div class="row">
+                                                        <div class="col-lg-4 col-sm-5">
+                                                            <div class="image">
+                                                                <img src="{{ asset("images/adventure_01.jpg") }}" alt="">
 
-    <div class="reservation-form">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <form id="reservation-form" name="gs" method="submit" role="search" action="#">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <h4>Make Your <em>Reservation</em> Through This <em>Form</em></h4>
-                            </div>
-                            <div class="col-lg-6">
-                                <fieldset>
-                                    <label for="Name" class="form-label">Your Name</label>
-                                    <input type="text" name="Name" class="Name" placeholder="Ex. John Smithee" autocomplete="on" required>
-                                </fieldset>
-                            </div>
-                            <div class="col-lg-6">
-                                <fieldset>
-                                    <label for="Number" class="form-label">Your Phone Number</label>
-                                    <input type="text" name="Number" class="Number" placeholder="Ex. +xxx xxx xxx" autocomplete="on" required>
-                                </fieldset>
-                            </div>
-                            <div class="col-lg-6">
-                                <fieldset>
-                                    <label for="chooseGuests" class="form-label">Number Of Guests</label>
-                                    <select name="Guests" class="form-select" aria-label="Default select example" id="chooseGuests" onChange="this.form.click()">
-                                        <option selected>ex. 3 or 4 or 5</option>
-                                        <option type="checkbox" name="option1" value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4+">4+</option>
-                                    </select>
-                                </fieldset>
-                            </div>
-                            <div class="col-lg-6">
-                                <fieldset>
-                                    <label for="Number" class="form-label">Check In Date</label>
-                                    <input type="date" name="date" class="date" required>
-                                </fieldset>
-                            </div>
-                            <div class="col-lg-12">
-                                <fieldset>
-                                    <label for="chooseDestination" class="form-label">Choose Your Destination</label>
-                                    <select name="Destination" class="form-select" aria-label="Default select example" id="chooseCategory" onChange="this.form.click()">
-                                        <option selected>ex. Switzerland, Lausanne</option>
-                                        <option value="Italy, Roma">Italy, Roma</option>
-                                        <option value="France, Paris">France, Paris</option>
-                                        <option value="Engaland, London">Engaland, London</option>
-                                        <option value="Switzerland, Lausanne">Switzerland, Lausanne</option>
-                                    </select>
-                                </fieldset>
-                            </div>
-                            <div class="col-lg-12">
-                                <fieldset>
-                                    <button class="main-button">Make Your Reservation Now</button>
-                                </fieldset>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-8 col-sm-7">
+                                                            <div class="right-content">
+                                                                <h4>Adventure Tour</h4>
+                                                                <span>Up Country</span>
+                                                                <p>Embark on an unforgettable adventure tour, exploring rugged terrains, wild landscapes,
+                                                                    and thrilling outdoor activities. Our expertly guided tours promise excitement and
+                                                                    breathtaking experiences for thrill-seekers of all levels.</p>
+                                                                <ul class="info">
+                                                                    <li><i class="fa fa-user"></i> 56 Travellers</li>
+                                                                    <li><i class="fa fa-globe"></i> 3 Districts</li>
+                                                                    <li><i class="fa fa-home"></i> 4 Days</li>
+                                                                </ul>
+                                                                {{--                                                <div class="text-button">--}}
+                                                                {{--                                                    <a href="/about">Need Directions ? <i class="fa fa-arrow-right"></i></a>--}}
+                                                                {{--                                                </div>--}}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="item">
+                                                    <div class="row">
+                                                        <div class="col-lg-4 col-sm-5">
+                                                            <div class="image">
+                                                                <img src="{{ asset("images/safari_01.jpg") }}" alt="">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-8 col-sm-7">
+                                                            <div class="right-content">
+                                                                <h4>Safari</h4>
+                                                                <span>Forests</span>
+                                                                <p>Experience the wild like never before with our safari tours!
+                                                                    Journey through stunning landscapes, encounter majestic wildlife,
+                                                                    and immerse yourself in nature. Our tours offer an exhilarating
+                                                                    blend of adventure and tranquility.</p>
+                                                                <ul class="info">
+                                                                    <li><i class="fa fa-user"></i> 86 Travellers</li>
+                                                                    <li><i class="fa fa-globe"></i> 2 Jungles</li>
+                                                                    <li><i class="fa fa-home"></i> 3 Days</li>
+                                                                </ul>
+                                                                {{--                                                <div class="text-button">--}}
+                                                                {{--                                                    <a href="/about">Need Directions ? <i class="fa fa-arrow-right"></i></a>--}}
+                                                                {{--                                                </div>--}}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="item last-item">
+                                                    <div class="row">
+                                                        <div class="col-lg-4 col-sm-5">
+                                                            <div class="image">
+                                                                <img src="{{ asset("images/snorkeling_01.jpg") }}" alt="">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-8 col-sm-7">
+                                                            <div class="right-content">
+                                                                <h4>Snorkeling</h4>
+                                                                <span>Under Water</span>
+                                                                <p>Combine the thrill of a safari with the beauty of underwater exploration on our
+                                                                    snorkeling tours! Dive into crystal-clear waters to discover vibrant marine
+                                                                    life and stunning coral reefs, all while enjoying the excitement of a guided adventure.</p>
+                                                                <ul class="info">
+                                                                    <li><i class="fa fa-user"></i> 105 Travellers</li>
+                                                                    <li><i class="fa fa-globe"></i> 4 Water areas</li>
+                                                                    <li><i class="fa fa-home"></i> 2 Days</li>
+                                                                </ul>
+                                                                {{--                                                <div class="text-button">--}}
+                                                                {{--                                                    <a href="/about">Need Directions ? <i class="fa fa-arrow-right"></i></a>--}}
+                                                                {{--                                                </div>--}}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </form>
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
+
     <script>
         $(".option").click(function(){
             $(".option").removeClass("active");

@@ -48,7 +48,7 @@
                         <li><a href="/">Home</a></li>
                         <li><a href="/about">About</a></li>
                         <li><a href="/gallery">Gallery</a></li>
-                        <li><a href="deals.html">Services</a></li>
+                        <li><a href="/services">Services</a></li>
                         <li><a href="/itinerary">Itinerary</a></li>
                         <li><a href="/reservation">Reservation</a></li>
                     </ul>
@@ -73,6 +73,12 @@
             <div class="col-lg-4">
                 <div class="border-button">
                     <a href="/reservation">Reserve Now</a>
+                </div>
+                <div class="border-button">
+                    <a href="https://wa.me/766679247?text=Hi%2C%20I%20have%20a%20question%20about%20your%20services"
+                       target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i> Chat Now
+                    </a>
                 </div>
             </div>
         </div>

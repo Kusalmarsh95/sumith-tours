@@ -46,12 +46,7 @@ Route::get('/snorkeling', function () {
 Route::get('/camping-site', function () {
     return view('pages.camping-site');
 });
-Route::get('/snorkeling', function () {
-    return view('pages.snorkeling');
-});
-Route::get('/snorkeling', function () {
-    return view('pages.snorkeling');
-});
+
 Route::get('/gallery', function () {
     return view('pages.gallery');
 });
