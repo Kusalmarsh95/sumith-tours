@@ -3,16 +3,18 @@
 <head>
     <title>Sumith Tours</title>
     <meta charset="utf-8">
-    <link rel="shortcut icon" type="x-icon" href="{{ asset("images/sumithtours.jpg") }}">
+    <link rel="shortcut icon" type="x-icon" href="{{ asset("images/sumithtours.png") }}">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="stylesheet" href="{{ asset('css/font-awesome-6.4.2.min.css') }}" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Bootstrap core CSS -->
     <link href="{{ asset("vendor/bootstrap/css/bootstrap.min.css") }}" rel="stylesheet">
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="{{ asset("css/fontawesome.css") }}">
+{{--    <link rel="stylesheet" href="{{ asset("css/fontawesome.css") }}">--}}
+    <link rel="stylesheet" href="{{ asset('css/fontawesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset("css/templatemo-woox-travel.css") }}">
     <link rel="stylesheet" href="{{ asset("css/owl.css") }}">
     <link rel="stylesheet" href="{{ asset("css/animate.css") }}">
@@ -40,7 +42,7 @@
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
                     <a href="/" class="logo">
-                        <img src="{{ asset("images/sumithtours.jpg") }}" alt="">
+                        <img src="{{ asset("images/sumithtours.png") }}" alt="">
 {{--                        <img src="{{ asset("images/destination.png") }}" alt="">--}}
                     </a>
 
@@ -103,7 +105,7 @@
 
 <script src="{{ asset("js/isotope.min.js") }}"></script>
 <script src="{{ asset("js/owl-carousel.js") }}"></script>
-<script src="{{ asset("js/wow.js") }}"></script>
+{{--<script src="{{ asset("js/wow.js") }}"></script>--}}
 <script src="{{ asset("js/tabs.js") }}"></script>
 <script src="{{ asset("js/popup.js") }}"></script>
 <script src="{{ asset("js/custom.js") }}"></script>

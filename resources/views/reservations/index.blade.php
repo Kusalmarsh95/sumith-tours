@@ -11,7 +11,7 @@
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <div data-mdb-input-init class="form-outline mb-4">
                         <input type="text" class="form-control" id="datatable-search-input" placeholder="Search" />
-                        <label class="form-label" for="datatable-search-input">Search</label>
+{{--                        <label class="form-label" for="datatable-search-input">Search</label>--}}
                     </div>
                     <table class="table table-hover" id="datatable">
                         <thead>

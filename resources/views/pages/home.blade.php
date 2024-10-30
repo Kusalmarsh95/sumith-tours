@@ -407,7 +407,7 @@
     <div class="cities-town">
         <div class="container">
             <div class="row">
-                <div class="slider-content">
+                <div class="slider-content mt-1">
                     <div class="row">
                         <div class="col-lg-12 mb-2">
                             <h4>Customer Reviews</h4>
