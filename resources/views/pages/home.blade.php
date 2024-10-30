@@ -188,6 +188,7 @@
                                                     Explore the wild and immerse yourself in unforgettable experiences
                                                 </p>
                                                 <ul>
+                                                    <li>•	Adventure Tour</li>
                                                     <li>•	Safari</li>
                                                     <li>•	Snorkeling</li>
                                                     <li>•	Camping Site</li>
