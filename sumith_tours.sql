@@ -1,242 +1,364 @@
-/*
- Navicat Premium Data Transfer
+-- MySQL dump 10.13  Distrib 8.0.38, for Win64 (x86_64)
+--
+-- Host: 127.0.0.1    Database: sumith_tours
+-- ------------------------------------------------------
+-- Server version	5.5.5-10.4.32-MariaDB
 
- Source Server         : root
- Source Server Type    : MySQL
- Source Server Version : 100427
- Source Host           : localhost:3306
- Source Schema         : sumith_tours
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
- Target Server Type    : MySQL
- Target Server Version : 100427
- File Encoding         : 65001
+--
+-- Table structure for table `cache`
+--
 
- Date: 07/10/2024 16:17:22
-*/
-
-SET NAMES utf8mb4;
-SET FOREIGN_KEY_CHECKS = 0;
-
--- ----------------------------
--- Table structure for cache
--- ----------------------------
 DROP TABLE IF EXISTS `cache`;
-CREATE TABLE `cache`  (
-  `key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `value` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `expiration` int NOT NULL,
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `cache` (
+  `key` varchar(255) NOT NULL,
+  `value` mediumtext NOT NULL,
+  `expiration` int(11) NOT NULL,
   PRIMARY KEY (`key`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- ----------------------------
--- Records of cache
--- ----------------------------
+--
+-- Dumping data for table `cache`
+--
 
--- ----------------------------
--- Table structure for cache_locks
--- ----------------------------
+LOCK TABLES `cache` WRITE;
+/*!40000 ALTER TABLE `cache` DISABLE KEYS */;
+/*!40000 ALTER TABLE `cache` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `cache_locks`
+--
+
 DROP TABLE IF EXISTS `cache_locks`;
-CREATE TABLE `cache_locks`  (
-  `key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `owner` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `expiration` int NOT NULL,
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `cache_locks` (
+  `key` varchar(255) NOT NULL,
+  `owner` varchar(255) NOT NULL,
+  `expiration` int(11) NOT NULL,
   PRIMARY KEY (`key`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- ----------------------------
--- Records of cache_locks
--- ----------------------------
+--
+-- Dumping data for table `cache_locks`
+--
 
--- ----------------------------
--- Table structure for failed_jobs
--- ----------------------------
+LOCK TABLES `cache_locks` WRITE;
+/*!40000 ALTER TABLE `cache_locks` DISABLE KEYS */;
+/*!40000 ALTER TABLE `cache_locks` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `failed_jobs`
+--
+
 DROP TABLE IF EXISTS `failed_jobs`;
-CREATE TABLE `failed_jobs`  (
-  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
-  `uuid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `connection` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `queue` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `payload` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `exception` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `failed_at` timestamp NOT NULL DEFAULT current_timestamp,
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `failed_jobs` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `uuid` varchar(255) NOT NULL,
+  `connection` text NOT NULL,
+  `queue` text NOT NULL,
+  `payload` longtext NOT NULL,
+  `exception` longtext NOT NULL,
+  `failed_at` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`) USING BTREE,
-  UNIQUE INDEX `failed_jobs_uuid_unique`(`uuid` ASC) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+  UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- ----------------------------
--- Records of failed_jobs
--- ----------------------------
+--
+-- Dumping data for table `failed_jobs`
+--
 
--- ----------------------------
--- Table structure for job_batches
--- ----------------------------
-DROP TABLE IF EXISTS `job_batches`;
-CREATE TABLE `job_batches`  (
-  `id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `total_jobs` int NOT NULL,
-  `pending_jobs` int NOT NULL,
-  `failed_jobs` int NOT NULL,
-  `failed_job_ids` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `options` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL,
-  `cancelled_at` int NULL DEFAULT NULL,
-  `created_at` int NOT NULL,
-  `finished_at` int NULL DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+LOCK TABLES `failed_jobs` WRITE;
+/*!40000 ALTER TABLE `failed_jobs` DISABLE KEYS */;
+/*!40000 ALTER TABLE `failed_jobs` ENABLE KEYS */;
+UNLOCK TABLES;
 
--- ----------------------------
--- Records of job_batches
--- ----------------------------
+--
+-- Table structure for table `galleries`
+--
 
--- ----------------------------
--- Table structure for jobs
--- ----------------------------
-DROP TABLE IF EXISTS `jobs`;
-CREATE TABLE `jobs`  (
-  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
-  `queue` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `payload` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `attempts` tinyint UNSIGNED NOT NULL,
-  `reserved_at` int UNSIGNED NULL DEFAULT NULL,
-  `available_at` int UNSIGNED NOT NULL,
-  `created_at` int UNSIGNED NOT NULL,
-  PRIMARY KEY (`id`) USING BTREE,
-  INDEX `jobs_queue_index`(`queue` ASC) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of jobs
--- ----------------------------
-
--- ----------------------------
--- Table structure for migrations
--- ----------------------------
-DROP TABLE IF EXISTS `migrations`;
-CREATE TABLE `migrations`  (
-  `id` int UNSIGNED NOT NULL AUTO_INCREMENT,
-  `migration` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `batch` int NOT NULL,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of migrations
--- ----------------------------
-INSERT INTO `migrations` VALUES (1, '0001_01_01_000000_create_users_table', 1);
-INSERT INTO `migrations` VALUES (2, '0001_01_01_000001_create_cache_table', 1);
-INSERT INTO `migrations` VALUES (3, '0001_01_01_000002_create_jobs_table', 1);
-INSERT INTO `migrations` VALUES (4, '2024_10_02_115133_create_reviews_table', 2);
-INSERT INTO `migrations` VALUES (5, '2024_10_03_050935_create_reservations_table', 3);
-
--- ----------------------------
--- Table structure for password_reset_tokens
--- ----------------------------
-DROP TABLE IF EXISTS `password_reset_tokens`;
-CREATE TABLE `password_reset_tokens`  (
-  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+DROP TABLE IF EXISTS `galleries`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `galleries` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `image_path` varchar(255) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`email`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- ----------------------------
--- Records of password_reset_tokens
--- ----------------------------
+--
+-- Dumping data for table `galleries`
+--
 
--- ----------------------------
--- Table structure for reservations
--- ----------------------------
+LOCK TABLES `galleries` WRITE;
+/*!40000 ALTER TABLE `galleries` DISABLE KEYS */;
+INSERT INTO `galleries` VALUES (3,'Tour 01','images/SS4u7LwWMWXHEMENu8owApg9FnCBMdxMwPKklJvE.jpg','2024-11-03 06:32:18','2024-11-03 06:32:32'),(9,'Tour 02','images/6MMf78FRkw7lYXHK5kHT8k38vAqt383RAdw7D2YN.jpg','2024-11-03 06:39:49','2024-11-03 06:39:59'),(10,'Tour 03','images/lmmcEx6gLvEyZgBcVKh5aMcH60KMbq0nLydwsGY9.jpg','2024-11-03 06:40:16','2024-11-03 06:40:16'),(11,'Tour 04','images/cbbAEp454GP2XkGn5wpSfGojj7xg9aWK0SKdPJXW.jpg','2024-11-03 06:40:33','2024-11-03 06:40:33'),(12,'Tour 05','images/ibqxIL35WgaLUOsdKR1942MV9J3uCsM8INhKKlpm.jpg','2024-11-03 06:40:44','2024-11-03 06:40:44'),(13,'Tour 06','images/IoIe2JtW4dqestUb8SbVX6zxgc49y6WWoWPOgAB1.jpg','2024-11-03 06:40:54','2024-11-03 06:40:54'),(14,'Tour 07','images/hSvCbWfDwkU3W6HNSdhaMwnM1OQtekX3wbs7R5Sr.jpg','2024-11-03 06:41:03','2024-11-03 06:41:03'),(15,'Tour 08','images/ocmDegMViIERXEseEQEr4AfR5ahFPmKuHi9FWl2B.jpg','2024-11-03 06:41:17','2024-11-03 06:41:17'),(16,'Tour 09','images/aPQCwomyQOLKTTwwBW63MGAjKxC2uHTFKXYVUXOo.jpg','2024-11-03 06:41:28','2024-11-03 06:41:28');
+/*!40000 ALTER TABLE `galleries` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `job_batches`
+--
+
+DROP TABLE IF EXISTS `job_batches`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `job_batches` (
+  `id` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `total_jobs` int(11) NOT NULL,
+  `pending_jobs` int(11) NOT NULL,
+  `failed_jobs` int(11) NOT NULL,
+  `failed_job_ids` longtext NOT NULL,
+  `options` mediumtext DEFAULT NULL,
+  `cancelled_at` int(11) DEFAULT NULL,
+  `created_at` int(11) NOT NULL,
+  `finished_at` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `job_batches`
+--
+
+LOCK TABLES `job_batches` WRITE;
+/*!40000 ALTER TABLE `job_batches` DISABLE KEYS */;
+/*!40000 ALTER TABLE `job_batches` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `jobs`
+--
+
+DROP TABLE IF EXISTS `jobs`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `jobs` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `queue` varchar(255) NOT NULL,
+  `payload` longtext NOT NULL,
+  `attempts` tinyint(3) unsigned NOT NULL,
+  `reserved_at` int(10) unsigned DEFAULT NULL,
+  `available_at` int(10) unsigned NOT NULL,
+  `created_at` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  KEY `jobs_queue_index` (`queue`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `jobs`
+--
+
+LOCK TABLES `jobs` WRITE;
+/*!40000 ALTER TABLE `jobs` DISABLE KEYS */;
+/*!40000 ALTER TABLE `jobs` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `migrations`
+--
+
+DROP TABLE IF EXISTS `migrations`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `migrations` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `migration` varchar(255) NOT NULL,
+  `batch` int(11) NOT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `migrations`
+--
+
+LOCK TABLES `migrations` WRITE;
+/*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
+INSERT INTO `migrations` VALUES (2,'0001_01_01_000001_create_cache_table',1),(3,'0001_01_01_000002_create_jobs_table',1),(4,'2024_10_02_115133_create_reviews_table',2),(5,'2024_10_03_050935_create_reservations_table',3),(6,'0001_01_01_000000_create_users_table',4),(7,'2024_11_03_100157_create_galleries_table',5);
+/*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `password_reset_tokens`
+--
+
+DROP TABLE IF EXISTS `password_reset_tokens`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `password_reset_tokens` (
+  `email` varchar(255) NOT NULL,
+  `token` varchar(255) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `password_reset_tokens`
+--
+
+LOCK TABLES `password_reset_tokens` WRITE;
+/*!40000 ALTER TABLE `password_reset_tokens` DISABLE KEYS */;
+/*!40000 ALTER TABLE `password_reset_tokens` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `reservations`
+--
+
 DROP TABLE IF EXISTS `reservations`;
-CREATE TABLE `reservations`  (
-  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `country` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `number` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `category` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `reservations` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `country` varchar(255) NOT NULL,
+  `number` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `category` varchar(255) NOT NULL,
   `date` date NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- ----------------------------
--- Records of reservations
--- ----------------------------
-INSERT INTO `reservations` VALUES (1, 'Samson Perera', 'Canada', '+94776521458', 'abc@gmail.com', 'Adventure Tour', '2024-10-10', '2024-10-03 10:24:55', '2024-10-03 10:24:55');
-INSERT INTO `reservations` VALUES (2, 'Samson Perera', 'Canada', '+94776521458', 'abc@gmail.com', 'Adventure Tour', '2024-10-10', '2024-10-03 10:25:28', '2024-10-03 10:25:28');
-INSERT INTO `reservations` VALUES (3, 'Samson Perera', 'Canada', '+94776521458', 'abc@gmail.com', 'Adventure Tour', '2024-10-10', '2024-10-03 10:26:56', '2024-10-03 10:26:56');
-INSERT INTO `reservations` VALUES (4, 'Samson Perera', 'Canada', '+94776521458', 'abc@gmail.com', 'Adventure Tour', '2024-10-10', '2024-10-03 10:31:32', '2024-10-03 10:31:32');
-INSERT INTO `reservations` VALUES (5, 'Samson Perera', 'Canada', '+94776521458', 'abc@gmail.com', 'Adventure Tour', '2024-10-10', '2024-10-03 10:33:47', '2024-10-03 10:33:47');
-INSERT INTO `reservations` VALUES (6, 'Samson Perera', 'Canada', '+94776521458', 'abc@gmail.com', 'Adventure Tour', '2024-10-10', '2024-10-03 10:34:54', '2024-10-03 10:34:54');
-INSERT INTO `reservations` VALUES (7, 'Samson Perera', 'Canada', '+94776521458', 'abc@gmail.com', 'Adventure Tour', '2024-10-10', '2024-10-03 10:48:36', '2024-10-03 10:48:36');
+--
+-- Dumping data for table `reservations`
+--
 
--- ----------------------------
--- Table structure for reviews
--- ----------------------------
+LOCK TABLES `reservations` WRITE;
+/*!40000 ALTER TABLE `reservations` DISABLE KEYS */;
+INSERT INTO `reservations` VALUES (1,'Samson Perera','Canada','+94776521458','abc@gmail.com','Adventure Tour','2024-10-17','2024-10-03 04:54:55','2024-11-03 08:38:17'),(2,'Dinusha Hewage','Canada','+94776521458','abc@gmail.com','Adventure Tour','2024-10-10','2024-10-03 04:55:28','2024-11-03 08:38:33'),(3,'Samson Perera','Canada','+94776521458','abc@gmail.com','Adventure Tour','2024-10-10','2024-10-03 04:56:56','2024-10-03 04:56:56'),(4,'Samson Perera','Canada','+94776521458','abc@gmail.com','Adventure Tour','2024-10-10','2024-10-03 05:01:32','2024-10-03 05:01:32'),(6,'Samson Perera','Canada','+94776521458','abc@gmail.com','Adventure Tour','2024-10-11','2024-10-03 05:04:54','2024-10-03 05:04:54'),(7,'Samson Perera','Canada','+94776521458','abc@gmail.com','Adventure Tour','2024-10-12','2024-10-03 05:18:36','2024-10-03 05:18:36');
+/*!40000 ALTER TABLE `reservations` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `reviews`
+--
+
 DROP TABLE IF EXISTS `reviews`;
-CREATE TABLE `reviews`  (
-  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
-  `customer_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `country` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `review` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `rating` tinyint UNSIGNED NOT NULL,
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `reviews` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `customer_name` varchar(255) NOT NULL,
+  `country` varchar(255) NOT NULL,
+  `review` text NOT NULL,
+  `rating` tinyint(3) unsigned NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- ----------------------------
--- Records of reviews
--- ----------------------------
-INSERT INTO `reviews` VALUES (1, 'Riche Kane', 'Russia', 'Nice experience with full of thriller', 4, '2024-10-03 04:01:53', '2024-10-03 04:01:53');
-INSERT INTO `reviews` VALUES (2, 'Leo Kane', 'Malaysia', 'Enjoyed a lot', 4, '2024-10-03 04:30:30', '2024-10-03 04:30:30');
-INSERT INTO `reviews` VALUES (3, 'Donald jake', 'Canada', 'Nico is such a warm personality and highly motivated guide (recommendable!)', 5, '2024-10-03 04:53:32', '2024-10-03 04:53:32');
-INSERT INTO `reviews` VALUES (4, 'Roy Angel', 'Spain', 'Comprehensive and very enjoyable tour. We enjoyed a full morning tour with our guide', 4, '2024-10-03 04:59:05', '2024-10-03 04:59:05');
-INSERT INTO `reviews` VALUES (5, 'Dia Rishka', 'India', 'Woow.. Amazing experience with sumith tours', 5, '2024-10-03 12:34:53', '2024-10-03 12:34:53');
-INSERT INTO `reviews` VALUES (6, 'Tony Zorzy', 'South Africa', 'Nice', 3, '2024-10-03 12:37:38', '2024-10-03 12:37:38');
+--
+-- Dumping data for table `reviews`
+--
 
--- ----------------------------
--- Table structure for sessions
--- ----------------------------
+LOCK TABLES `reviews` WRITE;
+/*!40000 ALTER TABLE `reviews` DISABLE KEYS */;
+INSERT INTO `reviews` VALUES (2,'Leo Kane','Malaysia','Enjoyed a lot',4,'2024-10-02 23:00:30','2024-10-02 23:00:30'),(3,'Donald jake','Canada','Nico is such a warm personality and highly motivated guide (recommendable!)',5,'2024-10-02 23:23:32','2024-10-02 23:23:32'),(4,'Roy Angel','Spain','Comprehensive and very enjoyable tour. We enjoyed a full morning tour with our guide',4,'2024-10-02 23:29:05','2024-10-02 23:29:05'),(5,'Dia Rishka','India','Woow.. Amazing experience with sumith tours',5,'2024-10-03 07:04:53','2024-10-03 07:04:53'),(6,'Tony Zorzy','South Africa','Nice',4,'2024-10-03 07:07:38','2024-11-03 07:48:38'),(7,'Alis Ferriera','Italy','Superb',4,'2024-11-03 07:12:52','2024-11-03 07:12:52');
+/*!40000 ALTER TABLE `reviews` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sessions`
+--
+
 DROP TABLE IF EXISTS `sessions`;
-CREATE TABLE `sessions`  (
-  `id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `user_id` bigint UNSIGNED NULL DEFAULT NULL,
-  `ip_address` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `user_agent` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL,
-  `payload` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `last_activity` int NOT NULL,
-  PRIMARY KEY (`id`) USING BTREE,
-  INDEX `sessions_user_id_index`(`user_id` ASC) USING BTREE,
-  INDEX `sessions_last_activity_index`(`last_activity` ASC) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `sessions` (
+  `id` varchar(255) NOT NULL,
+  `user_id` bigint(20) unsigned DEFAULT NULL,
+  `ip_address` varchar(45) DEFAULT NULL,
+  `user_agent` text DEFAULT NULL,
+  `payload` longtext NOT NULL,
+  `last_activity` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `sessions_user_id_index` (`user_id`),
+  KEY `sessions_last_activity_index` (`last_activity`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- ----------------------------
--- Records of sessions
--- ----------------------------
-INSERT INTO `sessions` VALUES ('2cjVQEhbo3Z87rvTaFCy9zfyttOC0t4EIJSfjXhp', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiUWo0QUpoQXZVdUM1WWQ0dkxHc1pXc2plcHNKZlBvREFlMWZib1licyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjk6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9nYWxsZXJ5Ijt9fQ==', 1727960502);
+--
+-- Dumping data for table `sessions`
+--
 
--- ----------------------------
--- Table structure for users
--- ----------------------------
+LOCK TABLES `sessions` WRITE;
+/*!40000 ALTER TABLE `sessions` DISABLE KEYS */;
+INSERT INTO `sessions` VALUES ('kKBGE4gyYHtp3N1f1nCSXQQZPK4qF3JCUKoduv2x',1,'127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36','YTo0OntzOjY6Il90b2tlbiI7czo0MDoiallDM0ZlZjhiRHlEY1JJb2pPR0Z5aU1wekt3Q2hjOWNGUWpHWkNpNiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mzg6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9hbGwtcmVzZXJ2YXRpb25zIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTt9',1730643701);
+/*!40000 ALTER TABLE `sessions` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `users`
+--
+
 DROP TABLE IF EXISTS `users`;
-CREATE TABLE `users`  (
-  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `users` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(255) NOT NULL,
+  `last_name` varchar(255) NOT NULL,
+  `user_name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
-  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `remember_token` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `password` varchar(255) NOT NULL,
+  `remember_token` varchar(100) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE,
-  UNIQUE INDEX `users_email_unique`(`email` ASC) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `users_user_name_unique` (`user_name`),
+  UNIQUE KEY `users_email_unique` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- ----------------------------
--- Records of users
--- ----------------------------
+--
+-- Dumping data for table `users`
+--
 
-SET FOREIGN_KEY_CHECKS = 1;
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'Super','Admin','admin','admin@gmail.com',NULL,'$2y$12$EEbACUKYQWjiQF.T1X/EXuPxEC4pcCO8q8YwZLxmgyZLayjo3nRZ2',NULL,'2024-11-03 04:28:30','2024-11-03 04:28:30');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2024-11-03 20:34:35

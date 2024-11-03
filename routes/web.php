@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ReservationController;
@@ -47,14 +48,11 @@ Route::get('/camping-site', function () {
     return view('pages.camping-site');
 });
 
-Route::get('/gallery', function () {
-    return view('pages.gallery');
-});
 Route::get('/', [PageController::class, 'home'])->name('home');
+Route::get('/gallery', [PageController::class, 'gallery'])->name('gallery');
+Route::get('/reviews', [PageController::class, 'reviews'])->name('reviews');
 
+Route::resource('/all-reservations', ReservationController::class);
+Route::resource('/all-reviews', ReviewController::class);
+Route::resource('galleries', GalleryController::class);
 
-Route::get('/all-reservations', [ReservationController::class, 'index'])->name('all-reservations');
-Route::get('/reservation', [ReservationController::class, 'create'])->name('reservation');
-Route::post('/reservation', [ReservationController::class, 'store'])->name('reservation.store');
-Route::get('/reviews', [ReviewController::class, 'index'])->name('reviews');;
-Route::post('/reviews', [ReviewController::class, 'store'])->name('review.store');;

@@ -17,8 +17,18 @@
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('all-reservations')" :active="request()->routeIs('all-reservations')">
+                    <x-nav-link :href="route('all-reservations.index')" :active="request()->routeIs('all-reservations.index')">
                         {{ __('Reservations') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('all-reviews.index')" :active="request()->routeIs('all-reviews.index')">
+                        {{ __('Reviews') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('galleries.index')" :active="request()->routeIs('galleries.index')">
+                        {{ __('Gallery') }}
                     </x-nav-link>
                 </div>
             </div>

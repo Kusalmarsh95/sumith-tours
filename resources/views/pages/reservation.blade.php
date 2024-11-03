@@ -47,7 +47,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <form id="reservation-form" name="gs" role="search" action="{{ route('reservation.store') }}" method="POST">
+                    <form id="reservation-form" name="gs" role="search" action="{{ route('all-reservations.store') }}" method="POST">
                         @csrf
                         <div class="row">
                             <div class="col-lg-12">
