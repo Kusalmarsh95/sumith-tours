@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\ItineraryController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ReservationController;
@@ -26,9 +27,9 @@ require __DIR__.'/auth.php';
 Route::get('/about', function () {
     return view('pages.about');
 })->name('about');
-Route::get('/itinerary', function () {
-    return view('pages.itinerary');
-});
+//Route::get('/itinerary', function () {
+//    return view('pages.itinerary');
+//});
 Route::get('/reservation', function () {
     return view('pages.reservation');
 });
@@ -51,8 +52,10 @@ Route::get('/camping-site', function () {
 Route::get('/', [PageController::class, 'home'])->name('home');
 Route::get('/gallery', [PageController::class, 'gallery'])->name('gallery');
 Route::get('/reviews', [PageController::class, 'reviews'])->name('reviews');
+Route::get('/itinerary', [PageController::class, 'itinerary'])->name('itinerary');
 
 Route::resource('/all-reservations', ReservationController::class);
 Route::resource('/all-reviews', ReviewController::class);
 Route::resource('galleries', GalleryController::class);
+Route::resource('itineraries', ItineraryController::class);
 

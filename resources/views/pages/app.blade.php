@@ -42,7 +42,7 @@
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
                     <a href="/" class="logo">
-                        <img src="{{ asset("images/sumithtours.png") }}" alt="">
+                        <img src="{{ asset("images/sumithtours.png") }}" alt="Sumith Tours">
 {{--                        <img src="{{ asset("images/destination.png") }}" alt="">--}}
                     </a>
 

@@ -5,7 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>Sumith Tours</title>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" type="x-icon" href="{{ asset("images/sumithtours.png") }}">
         <script src="{{ asset('js/jquery-3.7.0.js') }}"></script>
         <!-- Fonts -->
         <link rel="stylesheet" href="{{ asset('css/bootstrap5.min.css') }}">
@@ -18,6 +20,7 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ asset('js/sweetalert2.all.min.js') }}"></script>
 
     </head>
     <body class="font-sans antialiased">

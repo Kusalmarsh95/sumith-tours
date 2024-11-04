@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Gallery;
+use App\Models\Itinerary;
 use App\Models\Review;
 use Illuminate\Http\Request;
 
@@ -23,5 +24,10 @@ class PageController extends Controller
     {
         $reviews = Review::all();
         return view('pages.review', compact('reviews'));
+    }
+    public function itinerary()
+    {
+        $itineraries = Itinerary::all();
+        return view('pages.itinerary', compact('itineraries'));
     }
 }
