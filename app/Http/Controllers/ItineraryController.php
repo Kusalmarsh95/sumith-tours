@@ -19,8 +19,13 @@ class ItineraryController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'date' => 'required|date',
-            'description' => 'required|string',
+            'tour_name' => 'required|string',
+            'year' => 'required|string',
+            'month' => 'required|string',
+            'members' => 'nullable|string',
+            'days' => 'nullable|integer',
+            'start_from' => 'nullable|string',
+            'venues' => 'nullable|string',
         ]);
 
         Itinerary::create($request->all());
@@ -31,8 +36,13 @@ class ItineraryController extends Controller
     {
         $itinerary = Itinerary::findOrFail($id);
         $request->validate([
-            'date' => 'required|date',
-            'description' => 'required|string',
+            'tour_name' => 'required|string',
+            'year' => 'required|string',
+            'month' => 'required|string',
+            'members' => 'nullable|string',
+            'days' => 'nullable|integer',
+            'start_from' => 'nullable|string',
+            'venues' => 'nullable|string',
         ]);
 
         $itinerary->update($request->all());

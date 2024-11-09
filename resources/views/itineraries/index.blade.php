@@ -41,16 +41,20 @@
                         <table class="table table-bordered">
                             <thead>
                             <tr>
-                                <th class="text-center">Date</th>
-                                <th class="text-center">Description</th>
-                                <th class="text-center">Actions</th>
+                                <th class="text-center">Year</th>
+                                <th class="text-center">Month</th>
+                                <th class="text-center">Tour Name</th>
+                                <th class="text-center">Number of Days</th>
+                                <th class="text-center">Action</th>
                             </tr>
                             </thead>
                             <tbody>
                             @foreach($itineraries as $itinerary)
                                 <tr>
-                                    <td>{{ $itinerary->date }}</td>
-                                    <td width="800px">{{ $itinerary->description }}</td>
+                                    <td>{{ $itinerary->year }}</td>
+                                    <td>{{ $itinerary->month }}</td>
+                                    <td width="600px">{{ $itinerary->tour_name }}</td>
+                                    <td>{{ $itinerary->days }}</td>
                                     <td class="text-center">
                                         <!-- Edit Button (Modal Trigger) -->
                                         <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editImageModal-{{ $itinerary->id }}">
@@ -136,13 +140,42 @@
                                 <div class="modal-body">
                                     <form action="{{ route('itineraries.store') }}" method="POST" enctype="multipart/form-data" class="image-upload-form">
                                         @csrf
-                                        <div class="mb-3">
-                                            <label for="date" class="form-label">Date</label>
-                                            <input type="date" class="form-control" id="date" name="date" required>
+
+                                        <div class="row mb-2">
+                                            <div class="col-md-6">
+                                                <label for="year" class="form-label">Year</label>
+                                                <input type="number" class="form-control" id="year" name="year" value="{{ old('year') }}" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="month" class="form-label">Month</label>
+                                                <input type="number" class="form-control" id="month" name="month" value="{{ old('month') }}" required>
+                                            </div>
                                         </div>
-                                        <div class="mb-3">
-                                            <label for="description" class="form-label">Description</label>
-                                            <textarea name="description" id="description" class="form-control" rows="5" required></textarea>
+                                        <div class="row mb-2">
+                                            <div class="col-md-12">
+                                                <label for="tour_name" class="form-label">Tour Name</label>
+                                                <input type="text" class="form-control" id="tour_name" name="tour_name" value="{{ old('tour_name') }}" required>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col-md-6">
+                                                <label for="members" class="form-label">Members</label>
+                                                <input type="text" class="form-control" id="members" name="members" value="{{ old('members') }}" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="days" class="form-label">Days</label>
+                                                <input type="number" class="form-control" id="days" name="days" value="{{ old('days') }}" required>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col-md-6">
+                                                <label for="start_from" class="form-label">Start Location</label>
+                                                <input type="text" class="form-control" id="start_from" name="start_from" value="{{ old('start_from') }}" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="venues" class="form-label">Number of Venus</label>
+                                                <input type="number" class="form-control" id="venues" name="venues" value="{{ old('venues') }}" required>
+                                            </div>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

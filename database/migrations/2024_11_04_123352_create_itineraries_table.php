@@ -13,8 +13,13 @@ return new class extends Migration
     {
         Schema::create('itineraries', function (Blueprint $table) {
             $table->id();
-            $table->date('date');
-            $table->string('description');
+            $table->string('tour_name');
+            $table->string('year');
+            $table->string('month');
+            $table->string('members');
+            $table->integer('days');
+            $table->string('start_from');
+            $table->string('venues');
             $table->timestamps();
         });
     }
