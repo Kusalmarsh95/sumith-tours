@@ -73,20 +73,54 @@
                                     <div class="modal-dialog modal-lg">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-date" id="editImageModalLabel-{{ $itinerary->id }}">Edit Image</h5>
+                                                <h5 class="modal-date" id="editImageModalLabel-{{ $itinerary->id }}">More Details</h5>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
                                                 <form action="{{ route('itineraries.update', $itinerary->id) }}" method="POST" enctype="multipart/form-data">
                                                     @csrf
                                                     @method('PUT')
-                                                    <div class="mb-3">
-                                                        <label for="date" class="form-label">Date</label>
-                                                        <input type="date" class="form-control" id="date" name="date" value="{{ $itinerary->date }}" required>
+                                                    <div class="row mb-2">
+                                                        <div class="col-md-6">
+                                                            <label for="year" class="form-label">Year</label>
+                                                            <input type="number" class="form-control" id="year" name="year" value="{{ $itinerary->year }}" required>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="month" class="form-label">Month</label>
+                                                            <input type="number" class="form-control" id="month" name="month" value="{{ $itinerary->month }}" required>
+                                                        </div>
                                                     </div>
-                                                    <div class="mb-3">
-                                                        <label for="description" class="form-label">Description</label>
-                                                        <textarea name="description" id="description" class="form-control" rows="5" required>{{ $itinerary->description }}</textarea>
+                                                    <div class="row mb-2">
+                                                        <div class="col-md-12">
+                                                            <label for="tour_name" class="form-label">Tour Name</label>
+                                                            <input type="text" class="form-control" id="tour_name" name="tour_name" value="{{ $itinerary->tour_name }}" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-2">
+                                                        <div class="col-md-6">
+                                                            <label for="members" class="form-label">Members</label>
+                                                            <input type="text" class="form-control" id="members" name="members" value="{{  $itinerary->members }}" required>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="days" class="form-label">Days</label>
+                                                            <input type="number" class="form-control" id="days" name="days" value="{{  $itinerary->days }}" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-2">
+                                                        <div class="col-md-6">
+                                                            <label for="start_from" class="form-label">Start Location</label>
+                                                            <input type="text" class="form-control" id="start_from" name="start_from" value="{{  $itinerary->start_from }}" required>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="venues" class="form-label">Number of Venus</label>
+                                                            <input type="number" class="form-control" id="venues" name="venues" value="{{ $itinerary->venues }}" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <button type="button" class="btn btn-sm btn-success mt-2 mb-2" id="addCategory">Add More Details</button>
+                                                    </div>
+                                                    <div class="card-body" id="details">
+
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
@@ -190,5 +224,42 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            function addCategoryRow() {
+                var newRow = `
+            <div class="row mt-1">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <input type="Date" class="form-control date" name="date[]" required>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <textarea rows="3" class="form-control description" name="description[]" required></textarea>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                     <button type="button" class="btn btn-sm btn-outline-danger remove-row"><i class="fas fa-trash-alt"></i></button>
+                </div>
+            </div>
+
+`;
+                $('#details').append(newRow);
+            }
+
+            // Event listener for "Add New" button click
+            $('#addCategory').click(function (e) {
+                e.preventDefault(); // Prevent the default form submission
+                addCategoryRow(); // Add a new category row
+            });
+
+            $('#details').on('click', '.remove-row', function () {
+                $(this).closest('.row').remove();
+            });
+
+        });
+    </script>
 
 </x-app-layout>
