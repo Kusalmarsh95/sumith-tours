@@ -28,12 +28,12 @@
                 </div>
                 <div class="col-lg-7">
                     <div class="section-heading">
-                        <h2>Details of October Tour</h2>
+                        <h2>Details of {{ $itineraries->tour_name }}</h2>
 {{--                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>--}}
                     </div>
                     <div class="row">
                         <div class="col-lg-12">
-                            @foreach($itineraries as $itinerary)
+                            @foreach($itineraries->details as $itinerary)
                                 <div class="info-item">
                                     <div class="row">
                                         <div class="col-lg-12">

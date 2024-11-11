@@ -12,7 +12,7 @@ class ItineraryController extends Controller
      */
     public function index()
     {
-        $itineraries = Itinerary::paginate(5);
+        $itineraries = Itinerary::with('details')->paginate(5);
         return view('itineraries.index', compact('itineraries'));
     }
 
@@ -32,6 +32,12 @@ class ItineraryController extends Controller
         return redirect()->route('itineraries.index')->with('success', 'Itinerary created successfully.');
     }
 
+    public function edit($id)
+    {
+        $itinerary = Itinerary::with('details')->findOrFail($id);
+        return view('itineraries.edit', compact('itinerary'));
+    }
+
     public function update(Request $request, $id)
     {
         $itinerary = Itinerary::findOrFail($id);
@@ -45,7 +51,26 @@ class ItineraryController extends Controller
             'venues' => 'nullable|string',
         ]);
 
-        $itinerary->update($request->all());
+        $itinerary->tour_name = $request->tour_name;
+        $itinerary->year = $request->year;
+        $itinerary->month = $request->month;
+        $itinerary->members = $request->members;
+        $itinerary->days = $request->days;
+        $itinerary->start_from = $request->start_from;
+        $itinerary->venues = $request->venues;
+        $itinerary->save();
+
+        $details = [];
+        foreach ($request->date as $key => $date) {
+            $details[] = [
+                'itinerary_id' => $itinerary->id,
+                'date' => $date,
+                'description' => $request->description[$key],
+            ];
+        }
+        $itinerary->details()->delete();
+        $itinerary->details()->createMany($details);
+
         return redirect()->route('itineraries.index')->with('success', 'Itinerary updated successfully.');
     }
 

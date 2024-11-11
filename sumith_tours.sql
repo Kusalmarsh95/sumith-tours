@@ -11,7 +11,7 @@
  Target Server Version : 100427
  File Encoding         : 65001
 
- Date: 04/11/2024 19:28:36
+ Date: 11/11/2024 19:00:23
 */
 
 SET NAMES utf8mb4;
@@ -100,26 +100,73 @@ INSERT INTO `galleries` VALUES (17, 'Tour 10', 'images/KrKO9A5xJHITeeHdufxz5xVfd
 DROP TABLE IF EXISTS `itineraries`;
 CREATE TABLE `itineraries`  (
   `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
-  `date` date NOT NULL,
-  `description` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tour_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `year` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `month` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `members` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `days` int NOT NULL,
+  `start_from` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `venues` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of itineraries
 -- ----------------------------
-INSERT INTO `itineraries` VALUES (1, '2024-10-07', 'Visit the Negombo fish market, Walking around the Negombo town, Drive to Wilpattu for afternoon safari, Overnight stay in Sigiriya', '2024-11-04 12:36:07', '2024-11-04 13:15:15');
-INSERT INTO `itineraries` VALUES (2, '2024-10-08', 'Sigiriya rock fortress, Village tour with traditional lunch, Elephant safari at Minneriye National Park, Climb Pidurangala rock to see sunset, Traditional Ayurveda spa, Overnight stay in Sigiriya', '2024-11-04 12:36:07', '2024-11-04 13:15:23');
-INSERT INTO `itineraries` VALUES (3, '2024-10-09', 'Drive to Kandy, Dambulla cave temple visit(one of most beautiful temple in Asia), Spice Garden, Kandy city tour, Traditional dancing show, Overnight stay in Kandy', '2024-11-04 13:14:53', '2024-11-04 13:15:38');
-INSERT INTO `itineraries` VALUES (4, '2024-10-10', 'Drive to Kithulgala for water rafting and canyoning, Devon waterfall and St. Clair waterfall, Overnight stay in Nuwara Eliya', '2024-11-04 13:16:41', '2024-11-04 13:16:41');
-INSERT INTO `itineraries` VALUES (5, '2024-10-11', 'Tea plantation and factory visit, Gregory Park, Horse riding, Horton\'s Plains National Park walking track 9km. One of the most beautiful landscape, plants, animals, viewpoint, waterfall, grass land, Overnight stay in Nuwara Eliya', '2024-11-04 13:20:42', '2024-11-04 13:20:42');
-INSERT INTO `itineraries` VALUES (6, '2024-10-12', 'No ride', '2024-11-04 13:24:39', '2024-11-04 13:24:39');
-INSERT INTO `itineraries` VALUES (7, '2024-10-13', 'Train ride to Ella, Cookery Class, Overnight stay in Ella', '2024-11-04 13:25:03', '2024-11-04 13:25:03');
-INSERT INTO `itineraries` VALUES (8, '2024-10-14', 'Climb Ella rock, Nine arch bridge, Climb little adam\'s peak, Zipline, Ravana pool club, Overnight stay in Ella', '2024-11-04 13:25:43', '2024-11-04 13:25:43');
-INSERT INTO `itineraries` VALUES (9, '2024-10-15', 'Upper Diyaluma waterfall, Underground cave with blue water pond (Nil Diya Pokuna), Ravana waterfall, Overnight stay in Ella', '2024-11-04 13:26:12', '2024-11-04 13:26:12');
-INSERT INTO `itineraries` VALUES (10, '2024-10-16', 'Drive ro Mirissa, Secret waterfall, End of Tour', '2024-11-04 13:26:42', '2024-11-04 13:26:42');
+INSERT INTO `itineraries` VALUES (1, 'October Tour', '2024', '10', 'Any One', 10, 'Negambo', '10', '2024-11-11 04:02:58', '2024-11-11 04:02:58');
+INSERT INTO `itineraries` VALUES (2, 'November Tour', '2024', '11', '25 Members', 6, 'Negambo', '10', '2024-11-05 04:02:58', '2024-11-05 04:02:58');
+INSERT INTO `itineraries` VALUES (3, 'December Tour', '2024', '12', '20 Members', 5, 'Negambo', '10', '2024-11-05 04:02:58', '2024-11-11 11:23:37');
+INSERT INTO `itineraries` VALUES (4, 'January Tour', '2025', '1', 'Any One', 6, 'Negambo', '5', '2024-11-05 04:02:58', '2024-11-11 12:31:39');
+
+-- ----------------------------
+-- Table structure for itinerary_details
+-- ----------------------------
+DROP TABLE IF EXISTS `itinerary_details`;
+CREATE TABLE `itinerary_details`  (
+  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `itinerary_id` bigint UNSIGNED NOT NULL,
+  `date` date NOT NULL,
+  `description` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `itinerary_details_itinerary_id_foreign`(`itinerary_id` ASC) USING BTREE,
+  CONSTRAINT `itinerary_details_itinerary_id_foreign` FOREIGN KEY (`itinerary_id`) REFERENCES `itineraries` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE = InnoDB AUTO_INCREMENT = 41 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of itinerary_details
+-- ----------------------------
+INSERT INTO `itinerary_details` VALUES (1, 1, '2024-10-07', 'Visit the Negombo fish market, Walking around the Negombo town, Drive to Wilpattu for afternoon safari, Overnight stay in Sigiriya', '2024-11-04 12:36:00', '2024-11-04 13:15:00');
+INSERT INTO `itinerary_details` VALUES (2, 1, '2024-10-08', 'Sigiriya rock fortress, Village tour with traditional lunch, Elephant safari at Minneriye National Park, Climb Pidurangala rock to see sunset, Traditional Ayurveda spa, Overnight stay in Sigiriya', '2024-11-04 12:36:00', '2024-11-04 13:15:00');
+INSERT INTO `itinerary_details` VALUES (3, 1, '2024-10-09', 'Drive to Kandy, Dambulla cave temple visit(one of most beautiful temple in Asia), Spice Garden, Kandy city tour, Traditional dancing show, Overnight stay in Kandy', '2024-11-04 13:14:00', '2024-11-04 13:15:00');
+INSERT INTO `itinerary_details` VALUES (4, 1, '2024-10-10', 'Drive to Kithulgala for water rafting and canyoning, Devon waterfall and St. Clair waterfall, Overnight stay in Nuwara Eliya', '2024-11-04 13:16:00', '2024-11-04 13:16:00');
+INSERT INTO `itinerary_details` VALUES (5, 1, '2024-10-11', 'Tea plantation and factory visit, Gregory Park, Horse riding, Horton\'s Plains National Park walking track 9km. One of the most beautiful landscape, plants, animals, viewpoint, waterfall, grass land, Overnight stay in Nuwara Eliya', '2024-11-04 13:20:00', '2024-11-04 13:20:00');
+INSERT INTO `itinerary_details` VALUES (6, 1, '2024-10-12', 'No ride', '2024-11-04 13:24:00', '2024-11-04 13:24:00');
+INSERT INTO `itinerary_details` VALUES (7, 1, '2024-10-13', 'Train ride to Ella, Cookery Class, Overnight stay in Ella', '2024-11-04 13:25:00', '2024-11-04 13:25:00');
+INSERT INTO `itinerary_details` VALUES (8, 1, '2024-10-14', 'Climb Ella rock, Nine arch bridge, Climb little adam\'s peak, Zipline, Ravana pool club, Overnight stay in Ella', '2024-11-04 13:25:00', '2024-11-04 13:25:00');
+INSERT INTO `itinerary_details` VALUES (9, 1, '2024-10-15', 'Upper Diyaluma waterfall, Underground cave with blue water pond (Nil Diya Pokuna), Ravana waterfall, Overnight stay in Ella', '2024-11-04 13:26:00', '2024-11-04 13:26:00');
+INSERT INTO `itinerary_details` VALUES (10, 1, '2024-10-16', 'Drive ro Mirissa, Secret waterfall, End of Tour', '2024-11-04 13:26:00', '2024-11-04 13:26:00');
+INSERT INTO `itinerary_details` VALUES (11, 2, '2024-11-07', 'Visit the Negombo fish market, Walking around the Negombo town, Drive to Wilpattu for afternoon safari, Overnight stay in Sigiriya', '2024-11-04 12:36:00', '2024-11-04 13:15:00');
+INSERT INTO `itinerary_details` VALUES (12, 2, '2024-11-08', 'Sigiriya rock fortress, Village tour with traditional lunch, Elephant safari at Minneriye National Park, Climb Pidurangala rock to see sunset, Traditional Ayurveda spa, Overnight stay in Sigiriya', '2024-11-04 12:36:00', '2024-11-04 13:15:00');
+INSERT INTO `itinerary_details` VALUES (13, 2, '2024-11-09', 'Drive to Kandy, Dambulla cave temple visit(one of most beautiful temple in Asia), Spice Garden, Kandy city tour, Traditional dancing show, Overnight stay in Kandy', '2024-11-04 13:14:00', '2024-11-04 13:15:00');
+INSERT INTO `itinerary_details` VALUES (14, 2, '2024-11-10', 'Drive to Kithulgala for water rafting and canyoning, Devon waterfall and St. Clair waterfall, Overnight stay in Nuwara Eliya', '2024-11-04 13:16:00', '2024-11-04 13:16:00');
+INSERT INTO `itinerary_details` VALUES (15, 2, '2024-11-11', 'Tea plantation and factory visit, Gregory Park, Horse riding, Horton\'s Plains National Park walking track 9km. One of the most beautiful landscape, plants, animals, viewpoint, waterfall, grass land, Overnight stay in Nuwara Eliya', '2024-11-04 13:20:00', '2024-11-04 13:20:00');
+INSERT INTO `itinerary_details` VALUES (16, 2, '2024-11-12', 'No ride', '2024-11-04 13:24:00', '2024-11-04 13:24:00');
+INSERT INTO `itinerary_details` VALUES (29, 3, '2024-12-09', 'Visit the Negombo fish market, Walking around the Negombo town, Drive to Wilpattu for afternoon safari, Overnight stay in Sigiriya', '2024-11-11 11:23:37', '2024-11-11 11:23:37');
+INSERT INTO `itinerary_details` VALUES (30, 3, '2024-12-10', 'Sigiriya rock fortress, Village tour with traditional lunch, Elephant safari at Minneriye National Park, Climb Pidurangala rock to see sunset, Traditional Ayurveda spa, Overnight stay in Sigiriya', '2024-11-11 11:23:37', '2024-11-11 11:23:37');
+INSERT INTO `itinerary_details` VALUES (31, 3, '2024-12-11', 'Drive to Kandy, Dambulla cave temple visit(one of most beautiful temple in Asia), Spice Garden, Kandy city tour, Traditional dancing show, Overnight stay in Kandy', '2024-11-11 11:23:37', '2024-11-11 11:23:37');
+INSERT INTO `itinerary_details` VALUES (32, 3, '2024-12-12', 'Drive to Kithulgala for water rafting and canyoning, Devon waterfall and St. Clair waterfall, Overnight stay in Nuwara Eliya', '2024-11-11 11:23:37', '2024-11-11 11:23:37');
+INSERT INTO `itinerary_details` VALUES (33, 3, '2024-12-13', 'Tea plantation and factory visit, Gregory Park, Horse riding, Horton\'s Plains National Park walking track 9km. One of the most beautiful landscape, plants, animals, viewpoint, waterfall, grass land, Overnight stay in Nuwara Eliya', '2024-11-11 11:23:37', '2024-11-11 11:23:37');
+INSERT INTO `itinerary_details` VALUES (34, 3, '2024-12-14', 'No ride', '2024-11-11 11:23:37', '2024-11-11 11:23:37');
+INSERT INTO `itinerary_details` VALUES (35, 4, '2025-01-05', 'Visit the Negombo fish market, Walking around the Negombo town, Drive to Wilpattu for afternoon safari, Overnight stay in Sigiriya', '2024-11-11 12:31:39', '2024-11-11 12:31:39');
+INSERT INTO `itinerary_details` VALUES (36, 4, '2025-01-06', 'Sigiriya rock fortress, Village tour with traditional lunch, Elephant safari at Minneriye National Park, Climb Pidurangala rock to see sunset, Traditional Ayurveda spa, Overnight stay in Sigiriya', '2024-11-11 12:31:39', '2024-11-11 12:31:39');
+INSERT INTO `itinerary_details` VALUES (37, 4, '2025-01-07', 'Drive to Kandy, Dambulla cave temple visit(one of most beautiful temple in Asia), Spice Garden, Kandy city tour, Traditional dancing show, Overnight stay in Kandy', '2024-11-11 12:31:39', '2024-11-11 12:31:39');
+INSERT INTO `itinerary_details` VALUES (38, 4, '2025-01-08', 'Drive to Kithulgala for water rafting and canyoning, Devon waterfall and St. Clair waterfall, Overnight stay in Nuwara Eliya', '2024-11-11 12:31:39', '2024-11-11 12:31:39');
+INSERT INTO `itinerary_details` VALUES (39, 4, '2025-01-09', 'Tea plantation and factory visit, Gregory Park, Horse riding, Horton\'s Plains National Park walking track 9km. One of the most beautiful landscape, plants, animals, viewpoint, waterfall, grass land, Overnight stay in Nuwara Eliya', '2024-11-11 12:31:39', '2024-11-11 12:31:39');
+INSERT INTO `itinerary_details` VALUES (40, 4, '2025-01-10', 'Tour End', '2024-11-11 12:31:39', '2024-11-11 12:31:39');
 
 -- ----------------------------
 -- Table structure for job_batches
@@ -172,7 +219,7 @@ CREATE TABLE `migrations`  (
   `migration` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 12 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of migrations
@@ -183,7 +230,8 @@ INSERT INTO `migrations` VALUES (4, '2024_10_02_115133_create_reviews_table', 2)
 INSERT INTO `migrations` VALUES (5, '2024_10_03_050935_create_reservations_table', 3);
 INSERT INTO `migrations` VALUES (6, '0001_01_01_000000_create_users_table', 4);
 INSERT INTO `migrations` VALUES (7, '2024_11_03_100157_create_galleries_table', 5);
-INSERT INTO `migrations` VALUES (8, '2024_11_04_123352_create_itineraries_table', 6);
+INSERT INTO `migrations` VALUES (10, '2024_11_04_123352_create_itineraries_table', 6);
+INSERT INTO `migrations` VALUES (11, '2024_11_09_174902_create_itinerary_details_table', 6);
 
 -- ----------------------------
 -- Table structure for password_reset_tokens
@@ -270,7 +318,8 @@ CREATE TABLE `sessions`  (
 -- ----------------------------
 -- Records of sessions
 -- ----------------------------
-INSERT INTO `sessions` VALUES ('M6ppkucQ02uBOwqVvrY6nVvR3sIbP9fBjDjO9JKW', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiQnhaUldsVzFzMlBXUTFvOFNVMWNWQlg5Qk1oZXE3cWdtZW1mZHhUcyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzM6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9pdGluZXJhcmllcyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7fQ==', 1730728571);
+INSERT INTO `sessions` VALUES ('GxivSNvKK75nMid8NQeNHlOIHA1gCF6tnD7h7bsB', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoibGF0SHBwOVRMWVQ3Z2VLVjltRWVsTFAwaWRrRU1nZlY1dDFacUpRMyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzM6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9pdGluZXJhcmllcyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7fQ==', 1731324491);
+INSERT INTO `sessions` VALUES ('QRAcxsUixXYxMhwroryMtfitgp9UaZJpzZWhSkXr', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiM1NlOUlpelY3NGRybnEySjBNY0xhaDRzWXZLU3l6aXVlVk1nQTFWRiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fX0=', 1731331772);
 
 -- ----------------------------
 -- Table structure for users
@@ -290,11 +339,12 @@ CREATE TABLE `users`  (
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `users_user_name_unique`(`user_name` ASC) USING BTREE,
   UNIQUE INDEX `users_email_unique`(`email` ASC) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
 INSERT INTO `users` VALUES (1, 'Super', 'Admin', 'admin', 'admin@gmail.com', NULL, '$2y$12$EEbACUKYQWjiQF.T1X/EXuPxEC4pcCO8q8YwZLxmgyZLayjo3nRZ2', NULL, '2024-11-03 09:58:30', '2024-11-03 09:58:30');
+INSERT INTO `users` VALUES (2, 'Sumith', 'Tours', 'sumith', 'tourssumith@gmail.com', NULL, '$2y$12$sjYw.bIz3AYs5sdxHNFp0O9E/fS.OeRGeDE/zsWuSeGLgNf39gOWy', NULL, '2024-11-11 13:27:18', '2024-11-11 13:27:18');
 
 SET FOREIGN_KEY_CHECKS = 1;

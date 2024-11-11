@@ -12,7 +12,10 @@ class PageController extends Controller
     public function home()
     {
         $reviews = Review::orderBy('created_at', 'desc')->take(5)->get();
-        return view('pages.home', compact('reviews'));
+        $itineraries = Itinerary::orderBy('created_at', 'desc')
+            ->take(4)
+            ->get();
+        return view('pages.home', compact('reviews', 'itineraries'));
     }
     public function gallery()
     {
@@ -25,9 +28,10 @@ class PageController extends Controller
         $reviews = Review::all();
         return view('pages.review', compact('reviews'));
     }
-    public function itinerary()
+    public function itinerary($id)
     {
-        $itineraries = Itinerary::all();
+        $itineraries = Itinerary::with('details')->findOrFail($id);
+
         return view('pages.itinerary', compact('itineraries'));
     }
 }

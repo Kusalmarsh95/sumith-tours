@@ -209,97 +209,15 @@
                                     </div>
                                 </div>
                             </div>
-{{--                            <div class="col-lg-12">--}}
-{{--                                <div class="item">--}}
-{{--                                    <div class="row">--}}
-{{--                                        <div class="col-lg-4 col-sm-5">--}}
-{{--                                            <div class="image">--}}
-{{--                                                <img src="{{ asset("images/safari_01.jpg") }}" alt="">--}}
 
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="col-lg-8 col-sm-7">--}}
-{{--                                            <div class="right-content">--}}
-{{--                                                <h4>Safari</h4>--}}
-{{--                                                <span>Forests</span>--}}
-{{--                                                <div class="main-button">--}}
-{{--                                                    <a href="/safari">Explore More</a>--}}
-{{--                                                </div>--}}
-{{--                                                <p>Experience the wild like never before with our safari tours!--}}
-{{--                                                    Journey through stunning landscapes, encounter majestic wildlife,--}}
-{{--                                                    and immerse yourself in nature. Our tours offer an exhilarating--}}
-{{--                                                    blend of adventure and tranquility.</p>--}}
-{{--                                                <ul class="info">--}}
-{{--                                                    <li><i class="fa fa-user"></i> 86 Travellers</li>--}}
-{{--                                                    <li><i class="fa fa-globe"></i> 2 Jungles</li>--}}
-{{--                                                    <li><i class="fa fa-home"></i> 3 Days</li>--}}
-{{--                                                </ul>--}}
-{{--                                                <div class="text-button">--}}
-{{--                                                    <a href="/about">Need Directions ? <i class="fa fa-arrow-right"></i></a>--}}
-{{--                                                </div>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <div class="col-lg-12">--}}
-{{--                                <div class="item last-item">--}}
-{{--                                    <div class="row">--}}
-{{--                                        <div class="col-lg-4 col-sm-5">--}}
-{{--                                            <div class="image">--}}
-{{--                                                <img src="{{ asset("images/snorkeling_01.jpg") }}" alt="">--}}
-
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="col-lg-8 col-sm-7">--}}
-{{--                                            <div class="right-content">--}}
-{{--                                                <h4>Snorkeling</h4>--}}
-{{--                                                <span>Under Water</span>--}}
-{{--                                                <div class="main-button">--}}
-{{--                                                    <a href="/snorkeling">Explore More</a>--}}
-{{--                                                </div>--}}
-{{--                                                <p>Combine the thrill of a safari with the beauty of underwater exploration on our--}}
-{{--                                                    snorkeling tours! Dive into crystal-clear waters to discover vibrant marine--}}
-{{--                                                    life and stunning coral reefs, all while enjoying the excitement of a guided adventure.</p>--}}
-{{--                                                <ul class="info">--}}
-{{--                                                    <li><i class="fa fa-user"></i> 105 Travellers</li>--}}
-{{--                                                    <li><i class="fa fa-globe"></i> 4 Water areas</li>--}}
-{{--                                                    <li><i class="fa fa-home"></i> 2 Days</li>--}}
-{{--                                                </ul>--}}
-{{--                                                <div class="text-button">--}}
-{{--                                                    <a href="/about">Need Directions ? <i class="fa fa-arrow-right"></i></a>--}}
-{{--                                                </div>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
                             <div class="col-lg-12 text-center">
                                 <div class="main-button">
                                     <a href="/services">Explore More</a>
                                 </div>
-{{--                                <ul class="page-numbers">--}}
-{{--                                    <li><a href="#"><i class="fa fa-arrow-left"></i></a></li>--}}
-{{--                                    <li class="active"><a href="#">1</a></li>--}}
-{{--                                    <li><a href="#">2</a></li>--}}
-{{--                                    <li><a href="#">3</a></li>--}}
-{{--                                    <li><a href="#"><i class="fa fa-arrow-right"></i></a></li>--}}
-{{--                                </ul>--}}
                             </div>
                         </div>
                     </div>
                 </div>
-{{--                <div class="col-lg-4">--}}
-{{--                    <div class="side-bar-map">--}}
-{{--                        <div class="row">--}}
-{{--                            <div class="col-lg-12">--}}
-{{--                                <div id="map">--}}
-{{--                                    <iframe src="https://www.google.com/maps/embed?pb=!3m1!1e3!4m6!3m5!1s0x3ae408ff88887e79:0xaf12e79ffbd980d7!8m2!3d6.4746288!4d80.876319!16zL20vMDJzMHlj?entry=ttu&g_ep=EgoyMDI0MDkxNi4wIKXMDSoASAFQAw%3D%3D" width="100%" height="550px" frameborder="0" style="border:0; border-radius: 23px; " allowfullscreen=""></iframe>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
             </div>
         </div>
     </div>
@@ -321,85 +239,27 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="owl-weekly-offers owl-carousel">
+                        @foreach($itineraries as $itinerary)
                         <div class="item">
                             <div class="thumb">
                                 <img src="{{ asset("images/offers-01.jpg") }}" alt="">
-
                                 <div class="text">
-                                    <h4>October Tour<br><span><i class="fa fa-users"></i> Any one</span></h4>
-{{--                                    <h6>$420<br><span>/person</span></h6>--}}
-                                    <div class="line-dec"></div>
-                                    <ul>
-                                        <li>Tour Summary:</li>
-                                        <li><i class="fa fa-taxi"></i> 10 Days Trip > Hotel Included</li>
-                                        <li><i class="fa fa-road"></i> Starting from Negambo</li>
-                                        <li><i class="fa fa-building"></i> 10 Venues</li>
-                                    </ul>
-                                    <div class="main-button">
-                                        <a href="/">Discover More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="thumb">
-                                <img src="{{ asset("images/offers-02.jpg") }}" alt="">
-
-                                <div class="text">
-                                    <h4>November Tour<br><span><i class="fa fa-users"></i> Any one</span></h4>
+                                    <h4>{{ $itinerary->tour_name }}<br><span><i class="fa fa-users"></i> {{ $itinerary->members }}</span></h4>
                                     {{--                                    <h6>$420<br><span>/person</span></h6>--}}
                                     <div class="line-dec"></div>
                                     <ul>
                                         <li>Tour Summary:</li>
-                                        <li><i class="fa fa-taxi"></i> 10 Days Trip > Hotel Included</li>
-                                        <li><i class="fa fa-road"></i> Starting from Negambo</li>
-                                        <li><i class="fa fa-building"></i> 10 Venues</li>
+                                        <li><i class="fa fa-taxi"></i> {{ $itinerary->days }} Days Trip > Hotel Included</li>
+                                        <li><i class="fa fa-road"></i> Starting from {{ $itinerary->starting_from }}</li>
+                                        <li><i class="fa fa-building"></i> {{ $itinerary->venues }} Venues</li>
                                     </ul>
                                     <div class="main-button">
-                                        <a href="/">Discover More</a>
+                                        <a href="/itinerary/{{ $itinerary->id }}">Discover More</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="thumb">
-                                <img src="{{ asset("images/offers-03.jpg") }}" alt="">
-                                <div class="text">
-                                    <h4>December Tour<br><span><i class="fa fa-users"></i> Any one</span></h4>
-                                    {{--                                    <h6>$420<br><span>/person</span></h6>--}}
-                                    <div class="line-dec"></div>
-                                    <ul>
-                                        <li>Tour Summary:</li>
-                                        <li><i class="fa fa-taxi"></i> 10 Days Trip > Hotel Included</li>
-                                        <li><i class="fa fa-road"></i> Starting from Negambo</li>
-                                        <li><i class="fa fa-building"></i> 10 Venues</li>
-                                    </ul>
-                                    <div class="main-button">
-                                        <a href="/">Discover More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="thumb">
-                                <img src="{{ asset("images/offers-01.jpg") }}" alt="">
-
-                                <div class="text">
-                                    <h4>September Tour<br><span><i class="fa fa-users"></i> Any one</span></h4>
-                                    {{--                                    <h6>$420<br><span>/person</span></h6>--}}
-                                    <div class="line-dec"></div>
-                                    <ul>
-                                        <li>Tour Summary:</li>
-                                        <li><i class="fa fa-taxi"></i> 10 Days Trip > Hotel Included</li>
-                                        <li><i class="fa fa-road"></i> Starting from Negambo</li>
-                                        <li><i class="fa fa-building"></i> 10 Venues</li>
-                                    </ul>
-                                    <div class="main-button">
-                                        <a href="/">Discover More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

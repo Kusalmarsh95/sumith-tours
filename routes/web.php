@@ -52,7 +52,7 @@ Route::get('/camping-site', function () {
 Route::get('/', [PageController::class, 'home'])->name('home');
 Route::get('/gallery', [PageController::class, 'gallery'])->name('gallery');
 Route::get('/reviews', [PageController::class, 'reviews'])->name('reviews');
-Route::get('/itinerary', [PageController::class, 'itinerary'])->name('itinerary');
+Route::get('/itinerary/{id}', [PageController::class, 'itinerary'])->name('itinerary');
 
 Route::resource('/all-reservations', ReservationController::class);
 Route::resource('/all-reviews', ReviewController::class);

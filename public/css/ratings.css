@@ -91,3 +91,6 @@ reset
 .rating-submit:hover {
     color: #fff
 }
+.card-primary:not(.card-outline) > .card-header {
+    background-color: #5590d1;
+}

@@ -57,9 +57,10 @@
                                     <td>{{ $itinerary->days }}</td>
                                     <td class="text-center">
                                         <!-- Edit Button (Modal Trigger) -->
-                                        <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editImageModal-{{ $itinerary->id }}">
-                                            Edit
+                                        <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#editImageModal-{{ $itinerary->id }}">
+                                            View
                                         </button>
+                                        <a class="btn btn-warning btn-sm" href="{{ route('itineraries.edit', $itinerary->id) }}">Edit</a>
 
                                         <!-- Delete Button (Modal Trigger) -->
                                         <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteImageModal-{{ $itinerary->id }}">
@@ -73,60 +74,51 @@
                                     <div class="modal-dialog modal-lg">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-date" id="editImageModalLabel-{{ $itinerary->id }}">More Details</h5>
+                                                <h2 class="modal-date" id="editImageModalLabel-{{ $itinerary->id }}">{{ $itinerary->tour_name }} Details</h2>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
-                                                <form action="{{ route('itineraries.update', $itinerary->id) }}" method="POST" enctype="multipart/form-data">
-                                                    @csrf
-                                                    @method('PUT')
-                                                    <div class="row mb-2">
-                                                        <div class="col-md-6">
-                                                            <label for="year" class="form-label">Year</label>
-                                                            <input type="number" class="form-control" id="year" name="year" value="{{ $itinerary->year }}" required>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <label for="month" class="form-label">Month</label>
-                                                            <input type="number" class="form-control" id="month" name="month" value="{{ $itinerary->month }}" required>
-                                                        </div>
+                                                <div class="row mb-2">
+                                                    <div class="col-md-6">
+                                                        <label for="year" class="form-label"><b>Year : {{ $itinerary->year }}</b></label>
                                                     </div>
-                                                    <div class="row mb-2">
-                                                        <div class="col-md-12">
-                                                            <label for="tour_name" class="form-label">Tour Name</label>
-                                                            <input type="text" class="form-control" id="tour_name" name="tour_name" value="{{ $itinerary->tour_name }}" required>
+                                                    <div class="col-md-6">
+                                                        <label for="month" class="form-label"><b>Month : {{ $itinerary->month }}</b></label>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-2">
+                                                    <div class="col-md-6">
+                                                        <label for="members" class="form-label"><b>Members : {{ $itinerary->members }}</b></label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label for="days" class="form-label"><b>Days : {{  $itinerary->days }}</b></label>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-2">
+                                                    <div class="col-md-6">
+                                                        <label for="start_from" class="form-label"><b>Start Location : {{ $itinerary->start_from }}</b></label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label for="venues" class="form-label"><b>Number of Venus : {{ $itinerary->venues }}</b></label>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="card-body" id="details">
+                                                    @foreach($itinerary->details as $detail)
+                                                        <div class="row mt-1">
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input type="Date" class="form-control date" name="date[]" value="{{ $detail->date }}" >
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-9">
+                                                                <div class="form-group">
+                                                                    <textarea rows="3" class="form-control description" name="description[]">{{ $detail->description }}</textarea>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="row mb-2">
-                                                        <div class="col-md-6">
-                                                            <label for="members" class="form-label">Members</label>
-                                                            <input type="text" class="form-control" id="members" name="members" value="{{  $itinerary->members }}" required>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <label for="days" class="form-label">Days</label>
-                                                            <input type="number" class="form-control" id="days" name="days" value="{{  $itinerary->days }}" required>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row mb-2">
-                                                        <div class="col-md-6">
-                                                            <label for="start_from" class="form-label">Start Location</label>
-                                                            <input type="text" class="form-control" id="start_from" name="start_from" value="{{  $itinerary->start_from }}" required>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <label for="venues" class="form-label">Number of Venus</label>
-                                                            <input type="number" class="form-control" id="venues" name="venues" value="{{ $itinerary->venues }}" required>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <button type="button" class="btn btn-sm btn-success mt-2 mb-2" id="addCategory">Add More Details</button>
-                                                    </div>
-                                                    <div class="card-body" id="details">
-
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                                        <button type="submit" class="btn btn-primary">Save Changes</button>
-                                                    </div>
-                                                </form>
+                                                    @endforeach
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -224,42 +216,5 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript">
-        $(document).ready(function () {
-
-            function addCategoryRow() {
-                var newRow = `
-            <div class="row mt-1">
-                <div class="col-md-3">
-                    <div class="form-group">
-                        <input type="Date" class="form-control date" name="date[]" required>
-                    </div>
-                </div>
-                <div class="col-md-8">
-                    <div class="form-group">
-                        <textarea rows="3" class="form-control description" name="description[]" required></textarea>
-                    </div>
-                </div>
-                <div class="col-md-1">
-                     <button type="button" class="btn btn-sm btn-outline-danger remove-row"><i class="fas fa-trash-alt"></i></button>
-                </div>
-            </div>
-
-`;
-                $('#details').append(newRow);
-            }
-
-            // Event listener for "Add New" button click
-            $('#addCategory').click(function (e) {
-                e.preventDefault(); // Prevent the default form submission
-                addCategoryRow(); // Add a new category row
-            });
-
-            $('#details').on('click', '.remove-row', function () {
-                $(this).closest('.row').remove();
-            });
-
-        });
-    </script>
 
 </x-app-layout>
