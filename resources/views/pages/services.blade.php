@@ -48,11 +48,6 @@
                                                                 <p>Embark on an unforgettable adventure tour, exploring rugged terrains, wild landscapes,
                                                                     and thrilling outdoor activities. Our expertly guided tours promise excitement and
                                                                     breathtaking experiences for thrill-seekers of all levels.</p>
-{{--                                                                <ul class="info">--}}
-{{--                                                                    <li><i class="fa fa-user"></i> 56 Travellers</li>--}}
-{{--                                                                    <li><i class="fa fa-globe"></i> 3 Districts</li>--}}
-{{--                                                                    <li><i class="fa fa-home"></i> 4 Days</li>--}}
-{{--                                                                </ul>--}}
                                                             </div>
                                                         </div>
                                                     </div>
@@ -123,16 +118,75 @@
                                                         <div class="col-lg-9 col-sm-7">
                                                             <div class="right-content">
                                                                 <h4>Camping site</h4>
-{{--                                                                <span>Under Water</span>--}}
                                                                 <p>A Camping Site offers an immersive outdoor experience where visitors
                                                                     can connect with nature and enjoy activities like campfire gatherings.
                                                                     camping sites are perfect for adventure enthusiasts looking to escape urban life,
                                                                     soak in natural beauty, and create memorable outdoor experiences.</p>
-{{--                                                                <ul class="info">--}}
-{{--                                                                    <li><i class="fa fa-user"></i> 105 Travellers</li>--}}
-{{--                                                                    <li><i class="fa fa-globe"></i> 4 Water areas</li>--}}
-{{--                                                                    <li><i class="fa fa-home"></i> 2 Days</li>--}}
-{{--                                                                </ul>--}}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="item last-item">
+                                                    <div class="row">
+                                                        <div class="col-lg-3 col-sm-5">
+                                                            <div class="image">
+                                                                <img src="{{ asset("images/rafting.jpg") }}" alt="">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-9 col-sm-7">
+                                                            <div class="right-content">
+                                                                <h4>Rafting</h4>
+                                                                <p>Experience the rush of adrenaline as you navigate thrilling rapids
+                                                                    on our rafting excursions. Whether you're a first-timer or an
+                                                                    experienced adventurer, our guided trips offer an unforgettable
+                                                                    blend of excitement and natural beauty as you paddle through scenic
+                                                                    rivers and challenging waters.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="item last-item">
+                                                    <div class="row">
+                                                        <div class="col-lg-3 col-sm-5">
+                                                            <div class="image">
+                                                                <img src="{{ asset("images/hiking.jpg") }}" alt="">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-9 col-sm-7">
+                                                            <div class="right-content">
+                                                                <h4>Hiking</h4>
+                                                                <p>Embark on a journey through breathtaking landscapes with our hiking
+                                                                    adventures. Explore scenic trails, from gentle walks to challenging
+                                                                    summits, and reconnect with nature while enjoying panoramic views,
+                                                                    fresh air, and the tranquility of the great outdoors.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="item last-item">
+                                                    <div class="row">
+                                                        <div class="col-lg-3 col-sm-5">
+                                                            <div class="image">
+                                                                <img src="{{ asset("images/underground.jpg") }}" alt="">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-9 col-sm-7">
+                                                            <div class="right-content">
+                                                                <h4>Underground Cave Exploration</h4>
+                                                                <p>Venture beneath the surface and discover a hidden world with
+                                                                    our underground cave exploration tours. Navigate through
+                                                                    stunning limestone formations, mysterious tunnels, and sparkling
+                                                                    crystal structures, all while learning about the fascinating
+                                                                    geology and history of these subterranean wonders.</p>
                                                             </div>
                                                         </div>
                                                     </div>
