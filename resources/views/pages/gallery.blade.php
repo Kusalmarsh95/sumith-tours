@@ -24,8 +24,18 @@
                         @foreach ($galleries as $gallery)
                             <div class="item col-md-4 mb-1">
                                 <div class="text" style="background-color: #efc475; border: 1px solid #f1cb85; border-radius: 10px; padding: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); text-align: center;">
-                                    <img src="{{ asset('storage/' . $gallery->image_path) }}" alt="{{ $gallery->title }}" class="img-fluid" style="width: 100%; height: auto; max-width: 350px; max-height: 350px; object-fit: cover;">
-{{--                                    <p>{{ $gallery->title }}</p>--}}
+                                    @php
+                                        $filePath = 'storage/' . $gallery->image_path;
+                                        $fileExtension = pathinfo($filePath, PATHINFO_EXTENSION);
+                                    @endphp
+                                    @if(in_array($fileExtension, ['jpg', 'jpeg', 'png', 'gif', 'bmp']))
+                                        <img src="{{ asset($filePath) }}" alt="{{ $gallery->title }}" class="img-fluid" style="width: 100%; height: auto; max-width: 350px; max-height: 350px; object-fit: cover;">
+                                    @elseif(in_array($fileExtension, ['mp4', 'webm', 'ogg']))
+                                        <video width="100%" height="auto" controls>
+                                            <source src="{{ asset($filePath) }}" type="video/{{ $fileExtension }}">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    @endif
                                 </div>
                             </div>
                         @endforeach

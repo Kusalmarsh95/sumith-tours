@@ -167,7 +167,7 @@
             document.querySelectorAll('.image-upload-form').forEach(form => {
                 form.addEventListener('submit', function(e) {
                     const imageInput = this.querySelector('input[type="file"]');
-                    const maxSize = 5 * 1024 * 1024; // 5 MB in bytes
+                    const maxSize = 20 * 1024 * 1024;
 
                     if (imageInput.files.length > 0 && imageInput.files[0].size > maxSize) {
                         e.preventDefault(); // Prevent form submission

@@ -32,7 +32,7 @@ class GalleryController extends Controller
     {
         $request->validate([
             'title' => 'required|string|max:255',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:5120',
+            'image' => 'required|max:20480',
         ]);
 
         $path = $request->file('image')->store('images', 'public');

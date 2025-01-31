@@ -115,7 +115,7 @@
             <div class="row mt-1">
                 <div class="col-md-3">
                     <div class="form-group">
-                        <input type="Date" class="form-control date" name="date[]" required>
+                        <input type="Date" class="form-control date" name="drug_id[]" required>
                     </div>
                 </div>
                 <div class="col-md-8">
